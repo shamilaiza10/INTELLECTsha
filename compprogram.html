@@ -1,0 +1,436 @@
+<html>
+
+<head>
+  <title> INTELLECT </title>
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+</head>
+
+<body>
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(24, 26, 25);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: 1px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+
+
+    .dropdown {
+      float: left;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: papyrus;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 206, 114);
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 260px;
+      box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+      border: 2px solid black;
+
+    }
+
+    .dropdown-content h6 {
+      float: none;
+      font-size: 15px;
+      color: black;
+      padding-left: 5px;
+
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="35px" height="auto" src="olp/logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="mweb.html">contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">support</a> </li>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Topics </button>
+          <div class="dropdown-content">
+            <h6>1 What is Programming</h6>
+            <h6>2 what is Compiling</h6>
+            <h6>3 What is Interpreter</h6>
+            <h6>4 History of Programming</h6>
+            <h6>5 Types of programming languages</h6>
+            <h6>6 MY PROJECTS</h6>
+
+
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    body {
+      background-color: #f5f5df;
+
+    }
+  </style>
+
+  <h1
+    style="color:rgb(0, 0, 0);text-decoration-line: underline; text-decoration-style:solid; text-decoration-color: blueviolet; text-align: center; font-size: 70px;font-family: papyrus;;position: absolute;top:16%;left:23%">
+    Computer Programming</h1>
+
+
+
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style="text-decoration-line: underline; text-decoration-style: solid;text-decoration-color: #40E0D0;font-size:50px ;margin-left: 20px;">
+    Programming </h1>
+
+  <style>
+    .lookimg {
+      float: left;
+      padding: 10px;
+      padding-top: 70px;
+      box-shadow: 7px 7px rgb(212, 148, 228);
+      height: 320px;
+      width: 320px;
+    }
+
+    .lookimg2 {
+      float: right;
+      padding: 10px;
+      margin-top: -130px;
+      padding-top: 70px;
+      box-shadow: 6px 6px rgb(212, 148, 228);
+
+      height: 250px;
+      width: 250px;
+    }
+
+    .hev {
+      font-size: 32px;
+      padding-left: 400px;
+
+    }
+  </style>
+
+  <img src="olp/language.png" class="lookimg">
+
+  <p class="hev">Programming is the process of giving machines a set of instructions
+    that describe how a
+    program should be carried out. Programmers will spend their whole careers learning a variety of programming
+    languages and tools so they can effectively build computer programs. Programmers will start by using a code
+    editor or IDE to write what is called source code. This is a collection of code written in a programming
+    language that other programmers can read.</p>
+
+  <p class="hev">Once the code is executed, then the computer program can run.
+    The different types of computer programs include Word processors, Database systems, video games, and websites.
+  </p>
+
+
+
+
+  <br>
+
+  <h1
+    style="text-decoration-line: underline; text-decoration-style: dotted; margin-left: 20px;text-decoration-color: #ee0303;font-size:40px;">
+    Compiling</h1>
+
+
+  <p style=" margin-left: 20px;font-size: 30px; color: #008080;">The Source code needs to be converted into machine
+    language, so that
+    machines can understand the instructions and execute the program.
+    This process of converting source code into machine language is known as compiling.</p>
+
+  <br>
+  <h1
+    style="   text-decoration-line: underline; text-decoration-style: dotted;margin-left: 20px; text-decoration-color: #ee0303;font-size: 40px;">
+    Machine Language</h1>
+
+  <img src="olp/language2.jpeg" class="lookimg2">
+  <p style="margin-left: 20px;font-size: 30px; color: #008080;">Machine language is a low-level
+    programming
+    language made out of binary numbers or bits that can only be read by machines.
+    It is also known as machine code or object code, in which instructions are executed directly by the CPU.</p>
+
+  <br>
+
+  <h1
+    style=" margin-left: 20px;  text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Interpreter</h1>
+
+
+  <p style="margin-left: 20px; font-size: 30px; color: #008080;">There are some languages that do not use compilers.
+    Instead, these languages will use an interpreter that will read and execute the code.</p>
+  <p style=" margin-left: 20px;font-size:30px;">Examples of interpreted programming languages would be JavaScript and
+    PHP.</p>
+  <br>
+
+  <h1
+    style="   text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #cbee05;font-size: 40px;margin-left: 20px;">
+    History of Programming</h1>
+
+
+  <p style="margin-left: 20px;font-size: 30px; color: #008080;">Many historians believe Ada Lovelace was the first to
+    create a published
+    computer program in the mid 19th century.
+    She was a mathematician who translated Luigi Federico Menabrea's writings on the Analytical Engine.
+    In this translation, Ada had added her own extensive notes and created a method for calculating Bernoulli
+    numbers
+    for the Analytical Engine.
+    The work of mathematician Alonzo Church as well as the Turing machine were the first introductions of computer
+    codes.
+    In the 1920's, computers were created which was followed by the earliest programming languages. For the next
+    century, as machines and technology continued to evolve, so did the number of programming languages.</p>
+
+  <br>
+
+
+
+  <h1
+    style=" margin-left: 20px;  text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #e9ec04; font-size: 40px;">
+    Types of programming languages</h1>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px; color:#008080;">
+    <li>JavaScript</li>
+    <li>C/C++</li>
+    <li>Java</li>
+    <li>C#</li>
+    <li>Ruby</li>
+    <li>PHP</li>
+  </ul>
+  </p>
+
+  <br>
+
+  <h1
+    style="   text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #e9ec04; font-size: 40px;">
+    MY PROJECTS</h1>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px; color: #1cf138;">
+    <li> <a href="bulbmagic.html" target="_blank" class="lookk">MAGIC BULB </a> </li>
+    <li> <a href="calculator.html" target="_blank" class="lookk">CALCULATOR</a></li>
+  </ul>
+
+  <style>
+    .lookk {
+      color: #1cf138;
+      font-size: 25px;
+    }
+  </style>
+
+
+  <br>
+
+  <hr width="100%" color="#DEB887" size="5px" />
+
+</body>
+
+</html>

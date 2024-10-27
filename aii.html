@@ -1,0 +1,426 @@
+<html>
+
+<head>
+  <title>INTELLECT</title>
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+
+</head>
+
+<body>
+
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 3%;
+      margin-top: -1px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+
+
+    .dropdown {
+      float: left;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: papyrus;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 206, 114);
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 260px;
+      box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+      border: 2px solid black;
+
+    }
+
+    .dropdown-content h6 {
+      float: none;
+      font-size: 15px;
+      color: black;
+      padding-left: 5px;
+
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="35px" height="auto" src="olp/logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="mweb.html">contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">support</a> </li>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Topics </button>
+          <div class="dropdown-content">
+            <h6>1 What is AI</h6>
+            <h6>2 Advantages of AI</h6>
+            <h6>3 Disadvantages of AI</h6>
+            <h6>4 Types of AI</h6>
+
+
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <style>
+    body {
+      background-color: #f5f5df;
+    }
+  </style>
+
+  <h1
+    style=" text-decoration-line: underline; font-family: papyrus;text-decoration-style:underline; font-size:90px ;text-decoration-color:rgb(132, 243, 165); position: absolute;top:9%;left:42% ">
+    AI </h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style=" -webkit-text-stroke: 1px rgb(238, 241, 236);text-decoration-line:underline;  text-decoration-style: solid ;text-decoration-color:rgb(241, 241, 138); font-size: 45px;">
+    What is AI</h1>
+
+  <style>
+    img {
+      float: right;
+      padding: 13px;
+      padding-top: 5px;
+    }
+  </style>
+
+  <img src="olp/ai.jpeg" alt="secure" style="width:350px;height:250px;margin-left:10px;">
+  <p style="font-size:35px ; color:rgb(41, 49, 160); padding-left: 10pxs;font-family:Times New Roman;"><b> AI stands for
+      Artificial intelligence.Artificial intelligence (AI) is the ability of machines to perform tasks that are
+      typically associated with human intelligence, such as learning and problem-solving.
+      It is possible to consider anything to be artificial intelligence if it consists of a program performing a task
+      that we would normally assume a human would perform.</b></p>
+
+  <br>
+  <br>
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    ADVANTAGES OF AI</h1>
+
+  <img src="olp/ai2.jpeg" alt="secure" style="width:350px;height:250px;margin-left:10px;">
+
+  <style>
+    li {
+      font-size: 25px;
+      color: rgb(100, 4, 79);
+    }
+  </style>
+  <ul>
+    <li>One of the biggest benefits of Artificial Intelligence is that it can significantly reduce errors and increase
+      accuracy and precision.</li>
+    <br>
+    <li>Another big benefit of AI is that humans can overcome many risks by letting AI robots do them for us. Whether it
+      be defusing a bomb, going to space, exploring the deepest parts of oceans, machines with metal bodies are
+      resistant in nature and can survive unfriendly atmospheres. Moreover, they can provide accurate work with greater
+      responsibility and not wear out easily.</li>
+    <br>
+    <li>There are many studies that show humans are productive only about 3 to 4 hours in a day. Humans also need breaks
+      and time offs to balance their work life and personal life. But AI can work endlessly without breaks. They think
+      much faster than humans and perform multiple tasks at a time with accurate results. </li>
+    <br>
+    <li>In practically every field, AI is the driving force behind numerous innovations that will aid humans in
+      resolving the majority of challenging issues.</li>
+    <br>
+    <li>Human beings are driven by emotions, whether we like it or not. AI on the other hand, is devoid of emotions and
+      highly practical and rational in its approach. A huge advantage of Artificial Intelligence is that it doesn't have
+      any biased views, which ensures more accurate decision-making.</li>
+    <br>
+    <li>Faster decision-making is another benefit of AI. By automating certain tasks and providing real-time insights,
+      AI can help organizations make faster and more informed decisions. This can be particularly valuable in
+      high-stakes environments, where decisions must be made quickly and accurately to prevent costly errors or save
+      lives.</li>
+  </ul>
+
+  <br>
+  <br>
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    DISADVANTAGES OF AI</h1>
+
+  <img src="olp/ai3.jpeg" alt="secure" style="width:350px;height:250px;margin-left:10px;">
+
+  <ul>
+    <li>AI applications automate the majority of tedious and repetitive tasks. Since we do not have to memorize things
+      or solve puzzles to get the job done, we tend to use our brains less and less. This addiction to AI can cause
+      problems to future generations</li>
+    <br>
+    <li>The ability to create a machine that can simulate human intelligence is no small feat. It requires plenty of
+      time and resources and can cost a huge deal of money. AI also needs to operate on the latest hardware and software
+      to stay updated and meet the latest requirements, thus making it quite costly.</li>
+    <br>
+    <li>As AI is replacing the majority of the repetitive tasks and other works with robots,human interference is
+      becoming less which will cause a major problem in the employment standards. Every organization is looking to
+      replace the minimum qualified individuals with AI robots which can do similar work with more efficiency.</li>
+  </ul>
+
+  <br>
+  <br>
+
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    TYPES OF AI</h1>
+  <style>
+    img {
+      float: right;
+      padding: 10px;
+      padding-top: 3px;
+    }
+  </style>
+
+
+  <style>
+    .types p {
+      font-family: Lucida Handwriting;
+      font-size: 20px;
+    }
+
+    .types li {
+      font-size: 30px;
+      font-weight: bolder;
+      color: rgb(236, 160, 60);
+    }
+  </style>
+
+  <div class="types">
+    <ul>
+      <li>Artificial Narrow Intelligence: </li>
+      <p>AI designed to complete very specific actions; unable to independently learn</p>
+
+      <li>Artificial General Intelligence: </li>
+      <p>AI designed to learn, think and perform at similar levels to humans.</p>
+
+      <li>Artificial Superintelligence: </li>
+      <p> AI able to surpass the knowledge and capabilities of humans.</p>
+
+      <li>Reactive Machines: </li>
+      <p>AI capable of responding to external stimuli in real time; unable to build memory or store information for
+        future.</p>
+
+      <li>Limited Memory :</li>
+      <p>AI that can store knowledge and use it to learn and train for future tasks.</p>
+
+      <li>Theory of Mind:</li>
+      <p> AI that can sense and respond to human emotions, plus perform the tasks of limited memory machines.</p>
+
+      <li>Self-aware: </li>
+      <p>AI that can recognize others, emotions, plus has sense of self and human-level intelligence; the final stage of
+        AI.</p>
+
+    </ul>
+  </div>
+
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>

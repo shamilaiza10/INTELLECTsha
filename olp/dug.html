@@ -1,0 +1,278 @@
+<html>
+
+<head>
+  <title> INTELLECT </title>
+  <link rel="icon" type="image/x-icon" href="logo5.png">
+</head>
+
+<body>
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: -9px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="36px" height="auto" src="logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="file:///D:/digital%20fest%20new/web.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="file:///D:/new%20website/mweb.html">contents</a></li>
+        <li><a href="file:///D:/new%20website/about.html">About</a></li>
+        <li><a href="file:///D:/new%20website/form.html">support</a> </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
+
+  <h1
+    style="color:rgb(0, 0, 0); text-decoration-line: underline; text-decoration-style: double; text-decoration-color: blueviolet; text-align: center; font-size: 90px;">
+    Drugs</h1>
+
+  <style>
+    img {
+      float: right;
+      padding: 10px;
+    }
+  </style>
+
+  <br>
+
+
+
+  <p style="font-size: 34px;"><img src="hi/drugpic.jpeg" alt="drugpic"
+      style="width:300px;height:250px;margin-left:20px; ">A medicine or other substance which has a physiological effect
+    when ingested or otherwise introduced into the body is called a drug.</p>
+
+  <style>
+    a {
+      color: rgb(240, 10, 125);
+      font-size: 25px;
+    }
+
+    .next {
+      opacity: 0;
+      transition: opacity 800ms;
+      font-size: 50px;
+      color: rgb(240, 10, 125);
+    }
+
+
+    .outerBox:hover .next {
+      opacity: 1.0;
+      font-size: 50px;
+      color: rgb(240, 10, 125);
+    }
+  </style>
+
+  <div class="outerBox">
+
+
+    <span><a href="addictionn.html">LETS SEE WHAT IS DRUG ADDICTION</a></span>
+    <span class="next"> &rarr;</span>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style="  font-size: 45px; text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #40E0D0;">
+    Different Types Of Drugs</h1>
+
+  <p style="font-size: 30px; color: #008080;">Grouping Drugs Based on Effect</p>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px;">
+    <li>Opioids.</li>
+    <li>Stimulants.</li>
+    <li>Depressants.</li>
+    <li> Hallucinogens.</li>
+  </ul>
+  </p>
+
+  <br>
+  <br>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTELLECT</title>
+    <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #f5f5df;
+        }
+
+        a {
+            color: inherit;
+            font-size: 10;
+            text-decoration: none;
+        }
+
+        #navbar {
+            background: rgb(24, 26, 25);
+            color: rgb(13, 26, 38);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 53px;
+            line-height: 60px;
+            width: 98.7vw;
+            z-index: 10;
+        }
+
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .nav-wrapper {
+            margin: auto;
+            text-align: center;
+            width: 70%;
+        }
+
+        @media(max-width: 768px) {
+            .nav-wrapper {
+                width: 90%;
+            }
+        }
+
+        @media(max-width: 638px) {
+            .nav-wrapper {
+                width: 100%;
+            }
+        }
+
+
+        .logo {
+            float: right;
+            position: absolute;
+            right: 2%;
+            margin-top: 1px;
+            font-size: 55px;
+            height: 0px;
+
+
+        }
+
+
+        #navbar ul {
+            list-style: none;
+            margin-right: 5px;
+            margin-top: -5px;
+            text-align: right;
+            position: absolute;
+            top: 2px;
+            left: 35%;
+            transition: transform 0.5s ease-out;
+            -webkit-transition: transform 0.5s ease-out;
+        }
+
+        @media(max-width: 640px) {
+            #navbar ul {
+                display: none;
+            }
+        }
+
+        @media(orientation: landscape) {
+            #navbar ul {
+                display: inline-block;
+            }
+        }
+
+        #navbar li {
+            display: inline-block;
+        }
+
+        #navbar li a {
+            color: rgb(250, 246, 246);
+            display: block;
+            font-size: 15px;
+            height: 50px;
+            letter-spacing: 0.2px;
+            margin: 0 20px;
+            padding: 0 4px;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+        }
+
+        #navbar li a:hover {
+            border-bottom: 1px solid rgb(240, 84, 12);
+            color: rgb(247, 94, 23);
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+        }
+
+        /* Animated Bottom Line */
+        #navbar li a:before,
+        #navbar li a:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            bottom: -1px;
+            background: rgb(13, 26, 38);
+        }
+
+        #navbar li a:before {
+            left: 0;
+            transition: 0.5s;
+        }
+
+        #navbar li a:after {
+            background: rgb(13, 26, 38);
+            right: 0;
+            /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+        }
+
+        #navbar li a:hover:before {
+            background: rgb(13, 26, 38);
+            width: 100%;
+            transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+        }
+
+        #navbar li a:hover:after {
+            background: transparent;
+            width: 100%;
+            /* transition: 0s; */
+        }
+
+
+        @media(max-width: 640px) {
+            .menuIcon {
+                cursor: pointer;
+                display: block;
+                position: fixed;
+                right: 15px;
+                top: 20px;
+                height: 23px;
+                width: 27px;
+                z-index: 12;
+            }
+
+        }
+
+        ion-icon {
+            color: rgb(225, 240, 95);
+            font-size: 35px;
+            float: left;
+            position: absolute;
+            left: -440px;
+            top: 10px;
+        }
+
+
+        .dropdown {
+            float: left;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: papyrus;
+            margin: 0;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: rgb(255, 206, 114);
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 260px;
+            box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+            border: 2px solid black;
+
+        }
+
+        .dropdown-content h6 {
+            float: none;
+            font-size: 15px;
+            color: black;
+            padding-left: 5px;
+
+            text-align: left;
+            line-height: 0.1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+
+
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            font-family: "Audiowide", sans-serif;
+            padding-left: 15px;
+
+        }
+
+        #animal {
+            font-size: 30px;
+            padding-left: 40px;
+            padding-right: 50px;
+        }
+
+        #ani2 {
+            font-size: 25px;
+            padding-left: 40px;
+            padding-right: 10px;
+        }
+
+        .anii {
+            padding-left: 40px;
+            padding-right: 10px;
+        }
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <nav id="navbar" class="">
+        <div class="nav-wrapper">
+
+            <div class="logo">
+                <img class="logooo" width="35px" height="auto" src="olp/logo6.png">
+            </div>
+
+            <ul id="menu">
+                <li></li>
+                <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+                <li><a href="mweb.html">contents</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="form.html">support</a> </li>
+
+
+
+                <div class="dropdown">
+                    <button class="dropbtn">Topics </button>
+                    <div class="dropdown-content">
+                        <h6>1 What is Animal tissue</h6>
+                        <h6>2 Types of tissues</h6>
+                        <h6>3 Epithelial tissue</h6>
+                        <h6>4 Connective tissue</h6>
+                        <h6>5 Muscular tissue</h6>
+                        <h6>6 Nervous tissue</h6>
+
+
+                    </div>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br height="50px">
+    <br height="50px">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+
+
+    <h1
+        style="visibility: inherit;color: rgb(0, 0, 0);text-decoration-line: underline;text-decoration-style: solid;text-decoration-color: blueviolet;text-align: center; font-size: 70px; font-family: papyrus; position: absolute;top:16%; left: 32%">
+        Animal Tissue</h1>
+
+    <h2>Animal Tissue</h2>
+    <p class=" animal" id="animal">Animal tissue is a group of animal cells that have similar structures and functions.
+        There are four basic types of animal tissue:-</p>
+    <ul id="anii" class="anii">
+        <li id="ani2" class="ani2">Epithelial tissue</li>
+        <li id="ani2" class="ani2">Connective tissue</li>
+        <li id="ani2" class="ani2">Muscular tissue</li>
+        <li id="ani2" class="ani2">Nervous tissue</li>
+    </ul> <br>
+
+    <h2>Epithelial tissue</h2>
+    <p class="animal" id="animal">The covering or protective tissue in the animal body are Epithelial Tissue.Epithelium
+        covers most organs and cavities within the body.It serves as a protective layer and forms the
+        covering or lining of body surfaces and cavities, as well as the outer layer of skin. Here are the key
+        characteristics and functions of epithelial tissue:Characteristics:
+        Cellularity: Epithelial tissue is made up of tightly packed cells with minimal extracellular material.
+        Polarity: Epithelial cells have distinct top (apical) and bottom (basal) surfaces. The apical surface is exposed
+        to the body’s exterior or to an internal open space (lumen), while the basal surface attaches to underlying
+        connective tissue via a structure called the basement membrane.
+        Avascularity: Epithelial tissue lacks blood vessels and relies on diffusion from underlying connective tissues
+        for nutrients and waste removal.
+        Regeneration: Epithelial cells have a high capacity for regeneration, which is important for tissues subjected
+        to wear and tear (e.g., skin and intestinal linings).</p>
+    <br>
+
+
+    <img src="tissuee.png" height="350px">
+
+    <h2>Connective tissue</h2>
+    <p class="animal" id="animal">Connective tissue is one of the four fundamental types of tissues in the human body,
+        playing a crucial role in supporting, connecting, and separating other tissues and organs. It is characterized
+        by its abundant extracellular matrix, which distinguishes it from other tissue types like epithelial, muscle,
+        and nervous tissues.Key Features of Connective Tissue:
+        Extracellular Matrix: Unlike other tissues, connective tissue has fewer cells and a large amount of
+        extracellular matrix, composed of fibers (collagen, elastin, reticular fibers) and ground substance (a gel-like
+        material made up of water, proteins, and glycosaminoglycans).
+        Vascularity: Connective tissues vary in vascularity. Some, like bone, are highly vascular, while others, like
+        cartilage, have no blood vessels (avascular).
+        Diverse Cell Types: Connective tissues contain various specialized cells such as fibroblasts (which produce
+        fibers), adipocytes (fat cells), chondrocytes (cartilage cells), osteocytes (bone cells), and blood cells.</p>
+    <br>
+
+    <h2>Muscular tissue</h2>
+    <p class="animal" id="animal">Muscular tissue refers to a type of body tissue that is responsible for producing
+        movement by contracting and relaxing. It is composed of muscle fibers and is categorized into three types:
+        skeletal, smooth, and cardiac. Each type plays a crucial role in different functions of the body, such as
+        voluntary movements, internal organ control, and heart function.</p>
+    <br>
+
+    <h2>Nervous tissue</h2>
+    <p class="animal" id="animal">Nervous tissue is a specialized type of tissue that makes up the central and
+        peripheral nervous systems, enabling communication between different parts of the body. It consists of neurons,
+        which transmit electrical signals, and supporting cells called glial cells, which provide protection,
+        nourishment, and support to the neurons. Nervous tissue is essential for coordinating body functions, processing
+        information, and responding to stimuli.</p>
+    <br>
+
+
+</body>
+
+</html>

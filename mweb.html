@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <title>INTELLECT </title>
+  <link rel="stylesheet" href="mweb.css">
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+
+</head>
+
+<body>
+  <section id="banner">
+
+
+
+
+
+    <nav id="navbar" class="">
+      <div class="nav-wrapper">
+
+        <div class="logo">
+
+          <img width="177px" height="50px" src="olp/logomain.png">
+        </div>
+
+        <ul id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">contents</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">support us</a> </li>
+        </ul>
+
+
+
+
+
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <form id="searchh" action="">
+          <input class="searchinp" type="search" placeholder="Search here..">
+          <i class="fa fa-search"></i>
+        </form>
+
+      </div>
+
+
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+      <button class="faq-button">
+        <ion-icon name="call" class="call"></ion-icon>
+        <span class="tooltip">+910082452944</span>
+      </button>
+
+
+    </nav>
+  </section>
+
+  <!-----------------cards--------------->
+  <div id="maincont">
+
+
+    <div id="data-container">
+
+      <div id="card-container">
+
+
+        <div class="card 1"><a href="compprogram.html" id="carda">
+            <img src="compprogram2.png" alt="Image 1">
+            <h3 id="maintext">COMPUTER PROGRAMMING</h3>
+          </a>
+        </div>
+
+
+        <div class="card 2"><a href="web2.html" id="carda">
+            <img src="olp/cyberbaner2.jpeg" alt="Image 2">
+            <h3 id="maintext">CYBER SECURITY</h3>
+          </a>
+        </div>
+
+        <div class="card 3"><a href="para.html" id="carda">
+            <img src="olp/forest.jpeg" alt="Image 3">
+            <h3 id="maintext">DEFORESTATION</h3>
+          </a>
+        </div>
+
+        <div class="card 4"><a href="networks.html" id="carda">
+            <img src="olp/comp.jpeg" alt="Image 4">
+            <h3 id="maintext"> COMPUTER NETWORK</h3>
+          </a>
+        </div>
+
+        <div class="card 5"><a href="web.html" id="carda">
+            <img src="olp/drug2.jpeg" alt="Image 5">
+            <h3 id="maintext">DRUGS</h3>
+
+          </a>
+        </div>
+
+        <div class="card 6"><a href="aii.html" id="carda">
+            <img src="olp/ai4.jpeg" alt="Image 6">
+            <h3 id="maintext">AI</h3>
+
+          </a>
+        </div>
+
+        <div class="card 7"><a href="flora.html" id="carda">
+            <img src="olp/flora.jpeg" alt="Image 7">
+            <h3 id="maintext">FLORA and FAUNA</h3>
+          </a>
+        </div>
+
+        <div class="card 8"><a href="cloud.html" id="carda">
+            <img src="olp/cloud2.jpeg" alt="Image 8"><a href="cloud.html" id="carda">
+              <h3 id="maintext">CLOUD COMPUTING</h3>
+            </a>
+            <!-- <div id="secondtext">This is the content of Card 8.</div> -->
+        </div>
+
+        <div class="card 7"><a href="animal.html" id="carda">
+            <img src="olp/tissue.jpg" alt="Image 7">
+            <h3 id="maintext">ANIMAL TISSUE</h3>
+          </a>
+        </div>
+
+        <div class="card 8"><a href="inprogress.html" id="carda">
+            <img src="olp/plant.jpg" alt="Image 8">
+            <h3 id="maintext">PLANT TISSUE</h3>
+          </a>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div id="pagination">
+    <a href="#" id="prev">Previous</a>
+
+    <a href="#" class="page-link" data-page="1">1</a>
+    <a href="#" class="page-link" data-page="2">2</a>
+    <a href="#" class="page-link" data-page="3">3</a>
+
+    <a href="#" id="next">Next</a>
+    <p id="page-numbers"> </p>
+  </div>
+
+
+  </section>
+</body>
+
+
+
+
+
+<script>
+  //script.js 
+  const cardsPerPage = 4; //-------------- Number of cards to show per page ------------------------
+
+
+  const dataContainer = document.getElementById('data-container');
+  const pagination = document.getElementById('pagination');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  const pageNumbers = document.getElementById('page-numbers');
+  const pageLinks = document.querySelectorAll('.page-link');
+
+  const cards =
+    Array.from(dataContainer.getElementsByClassName('card'));
+
+  // Calculate the total number of pages 
+  const totalPages = Math.ceil(cards.length / cardsPerPage);
+  let currentPage = 1;
+
+  // Function to display cards for a specific page 
+  function displayPage(page) {
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+    cards.forEach((card, index) => {
+      if (index >= startIndex && index < endIndex) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Function to update pagination buttons and page numbers 
+  function updatePagination() {
+    // pageNumbers.textContent =
+    //     `Page ${currentPage} of ${totalPages}`;
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages;
+    pageLinks.forEach((link) => {
+      const page = parseInt(link.getAttribute('data-page'));
+      link.classList.toggle('active', page === currentPage);
+    });
+  }
+
+  // Event listener for "Previous" button 
+  prevButton.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+
+  // Event listener for "Next" button 
+  nextButton.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      displayPage(currentPage);
+      updatePagination();
+    }
+  });
+
+  // Event listener for page number buttons 
+  pageLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const page = parseInt(link.getAttribute('data-page'));
+      if (page !== currentPage) {
+        currentPage = page;
+        displayPage(currentPage);
+        updatePagination();
+      }
+    });
+  });
+
+  // Initial page load 
+  displayPage(currentPage);
+  updatePagination();
+
+</script>
+
+</html>

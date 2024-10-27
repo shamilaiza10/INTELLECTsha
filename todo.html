@@ -1,0 +1,325 @@
+<html>
+    <head><title>ATTAIN- To do</title>
+      <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+    <style>
+
+
+#navbar {
+   background: rgb(25, 25, 26);
+  color: rgb(13, 26, 38);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 53px;
+  line-height: 60px;
+  width: 98.7vw;
+  z-index: 10;
+}
+
+@keyframes animateBg{
+   100%{
+         filter: hue-rotate(360deg); 
+   }
+}
+
+.nav-wrapper {
+  margin: auto;
+  text-align: center;
+  width: 70%;
+} @media(max-width: 768px) {
+    .nav-wrapper {
+      width: 90%;
+    }
+  } @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    } 
+
+
+.logo {
+  float: right;
+  position: absolute;
+  right:2%;
+  margin-top: 2px;
+  font-size: 55px;
+  height: 0px;
+  
+
+}
+
+
+#navbar ul {
+  list-style: none;
+   margin-right: 5px; 
+  margin-top: -5px;
+  text-align: right;
+  position: absolute;
+  top:2px;
+  left: 35%;
+  transition: transform 0.5s ease-out;
+  -webkit-transition: transform 0.5s ease-out;
+} @media(max-width: 640px) {
+    #navbar ul {
+      display: none;
+    }
+  } @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+#navbar li {
+  display: inline-block;
+}
+
+#navbar li a {
+  color: rgb(250, 246, 246);
+  display: block;
+  font-size: 15px;
+  height: 50px;
+  letter-spacing: 0.2px;
+  margin: 0 20px;
+  padding: 0 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+#navbar li a:hover {
+ border-bottom: 1px solid rgb(240, 84, 12); 
+  color: rgb(247, 94, 23);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* Animated Bottom Line */
+#navbar li a:before, #navbar li a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -1px;
+  background: rgb(13, 26, 38);
+}
+
+#navbar li a:before {
+  left: 0;
+  transition: 0.5s;
+}
+
+#navbar li a:after {
+  background: rgb(13, 26, 38);
+  right: 0;
+  /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+}
+
+#navbar li a:hover:before {
+  background: rgb(13, 26, 38);
+  width: 100%;
+  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+}
+
+#navbar li a:hover:after {
+  background: transparent;
+  width: 100%;
+  /* transition: 0s; */
+}
+
+@media(max-width: 640px) {
+  .menuIcon {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    height: 23px;
+    width: 27px;
+    z-index: 12;
+  }
+
+}
+
+
+
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #89e66d;
+}
+.container{
+    width: 40%;
+    top: 60%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%,-50%);
+}
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+    outline: none;
+    border-color: #8bec98;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d0e0f;
+    border: none;
+    color: rgb(239, 255, 8);
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+}
+#tasks{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color: #6583e5;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.text-onscreen{
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 70px;
+    color: rgb(236, 5, 5);
+    -webkit-text-stroke: 1px black;
+    text-decoration: dotted;
+    text-decoration-line: underline;
+    text-decoration-color: #111111;
+    
+}
+.text2{
+    font-size: 30px;
+    margin-left: 400px;
+}
+    </style>
+    
+</head>
+    <body>
+
+        <nav id="navbar" class="">
+            <div class="nav-wrapper">
+              
+              <div class="logo">
+              <img class="logooo" width="45px" height="auto" src="olp/attainlogo2.png">
+              </div>
+    
+           <ul id="menu">    
+    <li></li>
+           <a href="mweb.html" ><ion-icon name="chevron-back-circle"></ion-icon></a> 
+                     <li><a href="file:///D:/new%20website/attain.html#banner">home</a></li>
+                     <li><a href="file:///D:/new%20website/attain.html#about">About</a></li>
+                     <li><a href="file:///D:/new%20website/form.html">support</a> </li> 
+                     
+       </ul>
+       </div>
+       </nav>
+                     
+                     
+<div class="text-onscreen">TO DO</div>
+<div class="text2">--add your tasks or works to remember it later--</div>
+
+        <div class="container">
+            <div id="newtask">
+                <input type="text" placeholder="Add Tasks">
+                <button id="push">Add</button>
+            </div>
+            <div id="tasks"></div>
+        </div>
+  
+
+
+    <script>
+        document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Kindly Enter Task Name!!!!")
+    }
+
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>

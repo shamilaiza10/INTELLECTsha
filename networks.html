@@ -1,0 +1,480 @@
+<html>
+
+<head>
+  <title> INTELLECT </title>
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+</head>
+
+<body>
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: 2px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+
+
+    .dropdown {
+      float: left;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 16px 16px;
+      background-color: inherit;
+      font-family: papyrus;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 206, 114);
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 270px;
+      box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+      border: 2px solid black;
+
+    }
+
+    .dropdown-content h6 {
+      float: none;
+      font-size: 15px;
+      color: black;
+      padding-left: 5px;
+
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="35px" height="auto" src="olp/logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="mweb.html">contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">support</a> </li>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Topics </button>
+          <div class="dropdown-content">
+            <h6>1 Computer Network?</h6>
+            <h6>2 key components of computer network </h6>
+            <h6>3 History</h6>
+            <h6>4 Types of Computer Networks</h6>
+
+
+
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    body {
+      background-color: #f5f5df;
+    }
+  </style>
+
+  <h1
+    style="color:rgb(0, 0, 0);  position: relative ; top:70px;text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: rgb(180, 40, 40); text-align: center; font-size: 90px;font-family: papyrus; position: absolute;top:11%;left:20%">
+    Computer Network ?</h1>
+
+  <style>
+    .look {
+      float: right;
+      padding: 10px;
+    }
+  </style>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    .look {
+      float: right;
+      padding: 8px;
+      border-top-right-radius: 45px;
+      border-bottom-left-radius: 45px;
+    }
+
+    span {
+      color: black;
+    }
+
+    .toty {
+      float: left;
+      padding-left: 10px;
+      padding-top: 150px;
+      border-top-right-radius: 45px;
+      border-top-left-radius: 45px;
+      border-bottom-left-radius: 45px;
+      border-bottom-right-radius: 45px;
+    }
+
+    b {
+      color: black;
+    }
+  </style>
+  <br>
+  <br>
+
+
+  <br>
+
+
+  <p style="font-size:30px; padding-left: 20px; color: rgb(12, 1, 12);"><img src="olp/comp.jpeg" class="look"
+      style="width:450px;height:250px;margin-left:20px; font-size: 40px;"><b>A computer network is a system that
+      connects two or more computing devices for transmitting and sharing information. Computing devices include
+      everything from a mobile phone to a server.</b>
+    <br><br>These devices are connected using physical wires such as fiber optics, but they can also be wireless.
+    Computer networks may be classified by many criteria, including the transmission medium used to carry signals,
+    bandwidth, communications protocols to organize network traffic, the network size, the topology, traffic control
+    mechanisms, and organizational intent
+    <br><br> Computer networks support many applications and services, such as access to the World Wide Web, digital
+    video and audio, shared use of application and storage servers, printers and fax machines, and use of email and
+    instant messaging applications.
+  </p>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--key components of comp network-->
+
+  <img src="olp/key.jpeg" width="500" height="auto" class="toty">
+
+
+  <h1
+    style="padding-left: 550px;  color: rgb(80, 173, 18); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Network Devices</h1>
+  <p style="font-size: 30px; padding-left: 550px;  color: #008080;">Network devices or nodes are computing devices that
+    need to be linked in the network. Some network devices include:</p>
+
+  <p>
+  <ul style="padding-left: 550px;  font-size: 30px; color: #d48f35e7;">
+
+    <li><b>Computers, mobiles, and ther consumer devices:</b> These are end devices that users directly and frequently
+      access. </li>
+    <br>
+    <li><b>Routers:</b>Routing is the process of selecting the network path through which the data packets traverse.
+    </li>
+    <br>
+    <li><b>Servers:</b>These are application or storage servers where the main computation and data storage occur. All
+      requests for specific tasks or data come to the servers.</li>
+    <br>
+    <li><b>Switch :</b>Repeaters are to networks what transformers are to electricity grids—they are electronic devices
+      that receive network signals and clean or strengthen them. Hubs are repeaters with multiple ports in them. They
+      pass on the data to whichever ports are available. Bridges are smarter hubs that only pass the data to the
+      destination port. A switch is a multi-port bridge. </li>
+    <br>
+    <li><b>Gateways :</b>Gateways are hardware devices that act as gates between two distinct networks. They can be
+      firewalls, routers, or servers.</li>
+  </ul>
+  </p>
+  <br>
+  <br>
+
+  <h1
+    style=" padding-left:30px; padding-right: 450px;  color: rgb(80, 173, 18); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    2. Links</h1>
+  <p style=" padding-left:30px; padding-right: 450px; font-size: 30px; color: #008080;">Links are the transmission media
+    which can be of two types:</p>
+  <p>
+  <ul style=" padding-right: 650px; ; font-size: 30px; color: #d48f35e7;;">
+
+    <li><b>Wired:</b> Examples of wired technologies used in networks include coaxial cables, phone lines, twisted-pair
+      cabling, and optical fibers.</li>
+    <br>
+    <li><b>Wireless:</b> Network connections can also be established through radio or other electromagnetic signals.
+      This kind of transmission is called wireless.</li>
+  </ul>
+  </p>
+  <br>
+  <br>
+
+
+
+  <h1
+    style=" padding-left: 450px; color: rgb(80, 173, 18); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    3. Communication protocols</h1>
+  <p style=" padding-left: 450px; font-size: 30px; color: #008080;">A communication protocol is a set of rules followed
+    by all nodes involved in the information transfer. Some common protocols include the internet protocol suite
+    (TCP/IP), IEEE 802, Ethernet, wireless LAN, and cellular standards</p>
+  <p>
+  <ul style="padding-left: 450px; font-size: 30px; color: #d48f35e7;">
+
+
+    <li><b>Network access layer: </b>This layer defines how the data is physically transferred. It includes how hardware
+      sends data bits through physical wires or fibers.</li>
+    <li><b>Internet layer:</b> This layer is responsible for packaging the data into understandable packets and allowing
+      it to be sent and received.</li>
+    <li><b>Transport layer:</b>This layer enables devices to maintain a conversation by ensuring the connection is valid
+      and stable.</li>
+    <li><b>Application layer:</b> This layer defines how high-level applications can access the network to initiate data
+      transfer.</li>
+  </ul>
+  </p>
+  <br>
+
+  <h1
+    style=" padding-left: 15px; color: rgb(80, 173, 18); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    4. Network Defense </h1>
+
+  <p style="padding-left:30px ; font-size: 30px; color: #d48f35e7;">While nodes, links, and protocols form the
+    foundation of a network, a modern network cannot exist without its defenses. Security is critical when unprecedented
+    amounts of data are generated, moved, and processed across networks.</p>
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style="padding-left:30px;  color: #e912e9; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    History</h1>
+  <p style="padding-left:30px; font-size: 30px; color: #008080;"><img src="olp/his.jpeg" class="look"
+      style="width:300px;height:200px;margin-left:20px; font-size: 40px;">The first working network, called ARPANET, was
+    created in the late 1960s and was funded by the U.S. Department of Defense. Government researchers used to share
+    information at a time when computers were large and difficult to move.</p>
+
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style="  color: black; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Types of Computer Networks</h1>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px; color: #000080	; list-style: none;">
+    <li></li>
+    <li>1. Local area network (LAN)</li>
+    <br>
+    <li>2. Personal area network (PAN)</li>
+    <br>
+    <li>3. Wireless local area network (WLAN)</li>
+    <br>
+    <li>4. Campus area network (CAN)</li>
+    <br>
+    <li>5. Metropolitan area network (MAN)</li>
+    <br>
+    <li>6. Wide area network (WAN)</li>
+    <br>
+    <li>7. Storage area network (SAN)</li>
+    <br>
+    <li>8. Passive optical local area network (POLAN)</li>
+    <br>
+    <li>9. Enterprise private network (EPN)</li>
+    <br>
+    <li>10. Virtual private network (VPN)</li>
+    <br>
+    <li>11. System-area network (SAN)</li>
+  </ul>
+  </p>
+  <br>
+
+
+</body>
+
+</html>

@@ -1,0 +1,427 @@
+<html>
+
+<head>
+  <title>INTELLECT </title>
+
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+
+</head>
+
+<body>
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: 2px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+
+
+    .dropdown {
+      float: left;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 16px 16px;
+      background-color: inherit;
+      font-family: papyrus;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 206, 114);
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 270px;
+      box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+      border: 2px solid black;
+
+    }
+
+    .dropdown-content h6 {
+      float: none;
+      font-size: 15px;
+      color: black;
+      padding-left: 5px;
+
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logoo" width="35px" height="auto" src="olp/logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="mweb.html">contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">support</a> </li>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Topics </button>
+          <div class="dropdown-content">
+            <h6>1 What is Cloud Computing</h6>
+            <h6>2 Types of Cloud Computing</h6>
+            <h6>3 Advantages of cloud computing</h6>
+            <h6>4 Disadvantages of cloud computing </h6>
+
+
+
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <style>
+    body {
+      background-color: #f5f5df;
+    }
+  </style>
+
+  <h1
+    style="float: right; text-decoration-line: underline;font-family: papyrus; text-decoration-style:underline; font-size:90px ;text-decoration-color:rgb(132, 243, 165); position: absolute;top:7%;left:23%">
+    Cloud Computing </h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    .look {
+
+      padding: 13px;
+      padding-top: 5px;
+      width: 450px;
+      height: 300px;
+      margin-left: 10px;
+    }
+  </style>
+
+  <img src="olp/cloud.jpeg" alt="secure" style=" float: left;" class="look">
+  <p
+    style="font-size:35px ; color:rgb(238, 131, 233); padding-left: 10pxs;font-family:Times New Roman; margin-left: 7px;">
+    <b> cloud computing means having the ability to store and access data and programs over the internet instead of on a
+      hard drive.
+      This means businesses of any size can harness powerful software and IT infrastructure to become bigger, leaner,
+      and more agile, as well as compete with much larger companies. Unlike with traditional hardware and software,
+      cloud computing helps businesses stay at the
+      forefront of technology without having to make large investments in purchasing, maintaining, and servicing
+      equipment themselves.</b>
+  </p>
+
+  <br>
+  <br>
+  <br>
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    Types of Cloud Computing</h1>
+  <br>
+  <img src="olp/cloud2.jpeg" alt="secure" style="float: right;" class="look">
+
+
+  <ul>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>SaaS</li>
+    <p style="color:#2F4F4F;font-size: 30px; font-family: lucida handwriting" ;>SaaS is a form of cloud computing in
+      which users can access software applications without needing to download, install, or store that software and its
+      various components on their devices or hard drive. Most cloud computing software of this kind is
+      subscription-based with an annual or monthly fee. In return, users get seamless solutions
+      and features without needing hardware, being bogged down by installing updates, or other maintenance tasks.</p>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>IaaS</li>
+    <p style="color:#FF8C00;font-size: 30px; font-family: lucida handwriting" ;>Infrastructure as a Service (IaaS)
+      refers to the fundamental building blocks of computing that can be rented: physical or virtual servers, storage
+      and networking. This is attractive to companies that want to build applications from the very ground up and want
+      to control nearly all the elements themselves, but it does
+      require firms to have the technical skills to be able to orchestrate services at that level. </p>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>PaaS</li>
+    <p style="color:#2F4F4F;font-size: 30px; font-family: lucida handwriting" ;>Platform as a Service (PaaS) is a cloud
+      computing solution that provides developers with an easy-to-use platform to create their own software, web
+      applications, or other programming projects. Businesses use PaaS to create proprietary
+      apps and programs without the need for servers or special testing environments.</p>
+
+  </ul>
+
+  <br>
+  <br>
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    Advantages of cloud computing</h1>
+
+  <br>
+  <img src="olp/cloud3.png" alt="secure" style="height: 500;float: right;" class="look">
+  <ul>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>With cloud computing, time investments for getting the system
+      up and running are minimal. There is no equipment to set up and there is no equipment to maintain.
+      Cloud providers handle the maintenance of physical components, as well as security and software updates.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>One of the most time-consuming bottlenecks in business today
+      is getting data into the hands of team members who need it right now. With cloud computing, every person in your
+      company has access from devices they already use, anywhere they need it.
+      Your team is up to speed at all times, which ensures faster collaboration.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>There is s no hardware or equipment to buy, no software to
+      install, and no licensing fees.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>Cloud computing providers offer redundant storage (generally
+      in multiple data centers), bolstered security, and faster recovery.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>You only pay for what you need. Add tools and resources for a
+      growing team or scale back when you need to.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>With cloud computing, security is handled by your provider
+      both online and physically at their data centres.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgb(95, 21, 91)" ;>With cloud computing, security is handled by your provider
+      both online and physically at their data centres.</li>
+
+  </ul>
+
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:rgb(241, 241, 138); font-size: 45px; ">
+    Disadvantages of cloud computing </h1>
+
+
+  <ul>
+    <li style=" font-size: 40px; color:rgba(14, 16, 124, 0.815)" ;>data loss or theft</li>
+    <br>
+
+    <li style=" font-size: 40px; color:rgba(14, 16, 124, 0.815)" ;>As you know, in cloud computing, every data (image,
+      audio, video, etc.) is stored on the cloud, and we access these data through the cloud by using the internet
+      connection. If you do not have good internet connectivity, you cannot access these data. However, we have no any
+      other way to access data from the cloud.</li>
+    <br>
+    <img src="olp/cloud4.jpeg" alt="secure" style="height: 350; width: 400; float: right;" class="look">
+
+    <li style=" font-size: 40px; color:rgba(14, 16, 124, 0.815)" ;>As we know, cloud infrastructure is completely owned,
+      managed, and monitored by the service provider, so the cloud users have less control over the function and
+      execution of services within a cloud infrastructure. </li>
+    <br>
+    <li style=" font-size: 40px; color:rgba(14, 16, 124, 0.815)" ;>Although cloud service providers implement the best
+      security standards to store important information. But, before adopting cloud technology, you should be aware that
+      you will be sending all your organization's sensitive information to a third party, i.e., a cloud computing
+      service provider. While sending the data on the cloud, there may be a chance that your organization's information
+      is hacked by Hackers.</li>
+    <br>
+    <li style=" font-size: 40px; color:rgba(14, 16, 124, 0.815)" ;>vendor lock-in refers to a situation where companies
+      using cloud computing services of a particular vendor(seller or salesman) are unable to switch to a different
+      vendor. This usually happens because of high switching costs, large amounts of data which is difficult to migrate,
+      and several other complexities. In case of vendor lock-in, companies are forced to receive services from a
+      particular vendor. This affects their operational workflow and efficiency.</li>
+
+    <br>
+    <br>
+
+
+
+</body>
+
+</html>

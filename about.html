@@ -1,0 +1,161 @@
+<html>
+
+<head>
+  <title>INTELLECT </title>
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+
+
+</head>
+
+<body>
+  <section id="banner">
+
+  </section>
+
+  <style>
+    body {
+      background-color: rgb(233, 211, 185);
+    }
+
+    img {
+      margin-top: 50px;
+      width: 101%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+    }
+
+    .logo {
+      width: 150px;
+      position: absolute;
+      top: 3%;
+      left: 2%;
+    }
+
+    .banner-text {
+      text-align: center;
+      color: #111010;
+      font-family: "lucida handwriting";
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      left: 35%;
+      font-size: 50px;
+      font-weight: 900;
+      background-image: url(olp/bgg.png);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .text2 {
+      text-align: center;
+      color: #0c0b0b;
+      font-family: "lucida handwriting";
+      text-align: center;
+      position: absolute;
+      top: 45%;
+      font-size: 40px;
+    }
+  </style>
+
+  <style>
+    ul {
+      background-color: black;
+      width: 300px;
+      display: block;
+      height: 7%;
+      border-radius: 20px;
+      -webkit-box-shadow: 3px 3px 3px #ee8686;
+      box-shadow: 3px 3px 3px #ee8686;
+      position: absolute;
+      top: -7px;
+    }
+
+    li {
+      display: inline-block;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+
+    }
+
+    li a {
+      color: yellow;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+  </style>
+
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mweb.html">contents</a></li>
+    </ul>
+  </nav>
+
+  <img src="olp/slide3.jpeg">
+  <div class="banner-text">
+    <h1>About </h1>
+  </div>
+
+  <div class="text2">
+    <p>INTELLECT is an educational website , which provides information on various topics.
+      Our main aim is to spread awareness and educate society.</p>
+  </div>
+
+
+
+
+</body>
+
+</html>

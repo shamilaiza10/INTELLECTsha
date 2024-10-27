@@ -1,0 +1,435 @@
+<html>
+
+<head>
+  <title> INTELLECT </title>
+
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+
+</head>
+
+<body>
+
+
+  <style>
+    .banner-text {
+      text-align: center;
+      padding-top: 5px;
+    }
+
+    .logo {
+      width: 100px;
+      position: absolute;
+      top: 2%;
+      left: 1%;
+    }
+
+    .banner-text span {
+      color: rgb(19, 18, 18);
+    }
+
+
+    #off {
+      color: rgb(241, 233, 233);
+      font-size: 17px;
+      background: linear-gradient(#eee37d, #f18c6d);
+      position: absolute;
+      left: 75%;
+      top: 210%;
+      width: 170px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    #onn {
+      color: black;
+      font-size: 17px;
+      background: linear-gradient(#bbf0ae, #f7bae8);
+      border: 2px solid black;
+      position: absolute;
+      left: 75%;
+      top: 222%;
+      width: 170px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    p {
+      color: red;
+      font-size: 50px;
+      position: absolute;
+      top: 175%;
+      left: 70%;
+    }
+
+    ion-icon {
+      font-size: 24px;
+    }
+  </style>
+
+
+
+  <section>
+
+    <img src="olp/logo2.png" class="logo">
+
+    <div class="banner-text">
+
+      <h1 style="color:#8B0000;font-size: 80px; text-align: center; padding-top:px;">MaGiC BuLb</h1>
+
+      <p>
+      <h3 style="padding-left: 20px;">If you click " turn on the bulb " bulb will on.</h3>
+      </p>
+
+      <p>
+      <h3 style="color: black; padding-left: 20px;">If you click " turn off the bulb " bulb will off.</h3>
+      </p>
+
+      <button onclick="document.getElementById('myImage').src='pic_bulbon.gif' ">Turn on the light </button>
+
+      <img id="myImage" src="pic_bulboff.gif" style="width:150px">
+
+      <button onclick="document.getElementById('myImage').src='pic_bulboff.gif' ">Turn off the light </button>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+
+    <p>Download images from here!</p>
+
+    <button onclick="downloadd()" id="off">
+      <ion-icon name="download-outline"></ion-icon> pic_bulboff
+    </button>
+
+    <br>
+    <br>
+
+    <button onclick="download()" id="onn">
+      <ion-icon name="download-outline"></ion-icon> pic_bulbon
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js">
+    </script>
+
+    <script id="off">
+      function downloadd() {
+        axios({
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0CbavI43tI4t8gBgsz-K_0Sk_DQIo20iHJkBMV3UXjR9Z7q_4jyJLrGjfMqOYan7x-hs&usqp=CAU',
+          method: 'GET',
+          responseType: 'blob'
+        })
+          .then((response) => {
+            const url = window.URL
+              .createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'pic_bulboff.gif');
+            document.body.appendChild(link);
+            link.click();
+          })
+      }
+
+    </script>
+
+    <script id="onn">
+      function download() {
+        axios({
+          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2biJRStuHK-QL44qUM7TZsJs_uhmzqNozV09uGkum_pzU4e_se_K8p0xN3pxBmRlges&usqp=CAU',
+          method: 'GET',
+          responseType: 'blob'
+        })
+          .then((response) => {
+            const url = window.URL
+              .createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'pic_bulbon.gif');
+            document.body.appendChild(link);
+            link.click();
+          })
+      }
+
+    </script>
+
+
+
+    <h1
+      style=" font-size: 50px; font-family: lucida handwriting; color: rgb(5, 102, 5); text-decoration-line:underline; text-decoration-color: #8B0000;">
+      Try it yourself</h1>
+
+
+    <!--[ Code Box 1 ]-->
+    <div class='K2_CBox'>
+      <div class='CB_Heading'>
+        <span>code</span>
+        <button id='copy1' class='C_box_main' onclick="copyC('copy1','code1')">
+          <i class='CBox_icn'></i>
+        </button>
+      </div>
+
+      <!--Add Your Parse HTML code Here-->
+      <div id='code1'>
+        <pre>&lt;html&gt;
+        &lt;head&gt;&lt;title&gt; MASTERMIND &lt;/title&gt;&lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;style&gt;
+            #banner{
+            background:url(&quot;olp/RB.jpeg&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            height: 130vh;
+            }
+            .banner-text{
+                text-align: center;
+            
+                padding-top: 5px;
+            }
+            .logo{
+                width: 100px;
+                position :absolute;
+                top: 2%;
+                left: 1%;
+                }
+            .banner-text span{
+                   
+                   color: rgb(19, 18, 18);
+                }
+        &lt;/style&gt;
+        
+        
+        &lt;section id=&quot;banner&quot;&gt;
+            
+        &lt;div class=&quot;banner-text&quot;&gt;
+        
+        &lt;h1 style=&quot;color:#8B0000;font-size: 80px; text-align: center; padding-top:px;&quot;&gt;MaGiC BuLb&lt;/h1&gt;
+        
+        &lt;p&gt;&lt;h3 style=&quot;padding-left: 20px;&quot;&gt;If you click &quot; turn on the bulb &quot; bulb will on.&lt;/h3&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;h3 style=&quot;color: black; padding-left: 20px;&quot;&gt;If you click &quot; turn off the bulb &quot; bulb will off.&lt;/h3&gt;&lt;/p&gt;
+        
+        
+        &lt;button onclick=&quot;document.getElementById('myImage').src='pic_bulbon.gif' &quot;&gt;Turn on the light  &lt;/button&gt;
+        
+        &lt;img id=&quot;myImage&quot; src=&quot;pic_bulboff.gif&quot; style=&quot;width:100px&quot;&gt;
+        
+        &lt;button onclick=&quot;document.getElementById('myImage').src='pic_bulboff.gif' &quot;&gt;Turn off the light  &lt;/button&gt;
+        
+        &lt;/div&gt;
+        &lt;/section&gt;
+        
+        &lt;/body&gt;
+        &lt;/html&gt;</pre>
+      </div>
+    </div>
+
+
+
+    <style>
+      .K2_CBox {
+        position: sticky;
+        top: 150%;
+        left: 5%;
+        background: #222020;
+        width: 60%;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        padding: 8px;
+        margin: 30px 0 30px
+      }
+
+      .K2_CBox .CB_Heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px
+      }
+
+      .K2_CBox .CB_Heading span {
+        margin: 0;
+        font-weight: 700;
+        font-family: inherit;
+        font-size: 1.1rem;
+        color: white;
+        padding-left: 30px;
+      }
+
+      .K2_CBox .C_box_main {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px;
+        outline: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #004cbd;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease
+      }
+
+      .K2_CBox .C_box_main:hover {
+        opacity: .8
+      }
+
+      .K2_CBox .C_box_main .CBox_icn {
+        flex-shrink: 0;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' viewBox='0 0 24 24'><rect x='5.54615' y='5.54615' width='16.45385' height='16.45385' rx='4'/><path d='M171.33311,181.3216v-8.45385a4,4,0,0,1,4-4H183.787' transform='translate(-169.33311 -166.86775)'/></svg>");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center
+      }
+
+      .K2_CBox .C_box_main.copied {
+        background: #2dcda7
+      }
+
+      .K2_CBox .C_box_main.copied .CBox_icn {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23fefefe' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' viewBox='0 0 24 24'><path d='M22 11.07V12a10 10 0 1 1-5.93-9.14'/><polyline points='23 3 12 14 9 11'/></svg>")
+      }
+
+      .K2_CBox pre {
+        margin: 0;
+        background: #f6f6f6;
+        padding: 15px;
+        border-radius: 5px;
+        color: #08102b;
+        font-size: .8rem;
+        font-family: monospace;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        white-space: pre-wrap;
+      }
+
+      .K2_CBox pre::before,
+      .K2_CBox pre::after {
+        content: ''
+      }
+
+      .dark-Mode .K2_CBox {
+        background: #2d2d30
+      }
+
+      .dark-Mode .K2_CBox pre {
+        background: #252526;
+        color: #fffdfc
+      }
+
+      .tNtf span {
+        position: fixed;
+        left: 24px;
+        bottom: -70px;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        z-index: 99981;
+        background: #323232;
+        color: rgba(255, 255, 255, .8);
+        font-size: 14px;
+        font-family: inherit;
+        border-radius: 3px;
+        padding: 13px 24px;
+        box-shadow: 0 5px 35px rgba(149, 157, 165, .3);
+        opacity: 0;
+        transition: all .1s ease;
+        animation: slideinwards 2s ease forwards;
+        -webkit-animation: slideinwards 2s ease forwards
+      }
+
+      @media screen and (max-width:500px) {
+        .tNtf span {
+          margin-bottom: 20px;
+          left: 20px;
+          right: 20px;
+          font-size: 13px
+        }
+      }
+
+      @keyframes slideinwards {
+        0% {
+          opacity: 0
+        }
+
+        20% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        50% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        80% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        100% {
+          opacity: 0;
+          bottom: -70px;
+          visibility: hidden
+        }
+      }
+
+      @-webkit-keyframes slideinwards {
+        0% {
+          opacity: 0
+        }
+
+        20% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        50% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        80% {
+          opacity: 1;
+          bottom: 0
+        }
+
+        100% {
+          opacity: 0;
+          bottom: -70px;
+          visibility: hidden
+        }
+      }
+
+      .darkMode .tNtf span {
+        box-shadow: 0 10px 40px rgba(0, 0, 0, .2)
+      }
+    </style>
+
+
+    <div id='toastNotif' class='tNtf'></div>
+    <script> function copyC(e, t) { var o = document.getElementById(e), n = document.getElementById(t), e = getSelection(), t = document.createRange(); e.removeAllRanges(), t.selectNodeContents(n), e.addRange(t), document.execCommand("copy"), e.removeAllRanges(), o.classList.add("copied"), document.getElementById("toastNotif").innerHTML = "<span>Copied to Clipboard!</span>", setTimeout(() => { o.classList.remove("copied") }, 3e3) } </script>
+
+
+    <br>
+    <br>
+
+    <hr width="100%" color="#9e7744" size="10px" />
+
+
+    </div>
+  </section>
+
+</body>
+
+</html>

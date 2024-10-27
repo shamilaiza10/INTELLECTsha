@@ -1,0 +1,280 @@
+<html>
+
+<head>
+  <title>INTELLECT</title>
+  <link rel="icon" type="image/x-icon" href="logo5.png">
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: 0px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: blue;
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+  </style>
+</head>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+
+    <div class="logo">
+      <img class="logooo" width="36px" height="auto" src="logo6.png">
+    </div>
+
+    <ul id="menu">
+      <li></li>
+      <a href="file:///D:/digital%20fest%20new/web2.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+      <li><a href="file:///D:/new%20website/mweb.html">contents</a></li>
+      <li><a href="file:///D:/new%20website/about.html">About</a></li>
+      <li><a href="file:///D:/new%20website/form.html">support</a> </li>
+    </ul>
+  </div>
+</nav>
+
+
+<body>
+
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
+
+  <br>
+  <br>
+  <br>
+
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline; font-size:100px ;text-decoration-color:rgb(23, 3, 80); text-align: center;">
+    Cyberbullying</h1>
+  <br>
+  <br>
+
+
+
+  <style>
+    .look {
+      float: right;
+      padding: 10px;
+      padding-top: 3px;
+      border-bottom-left-radius: 50px;
+      border-top-right-radius: 60px;
+    }
+  </style>
+
+  <p style="font-size:35px ; color: #4B0082; padding-left: 10px;"><img class="look" src="hi/cyberbully.png" alt="cyber"
+      style="width:350px;height:250px;margin-left:10px;"><b>cyberbullying is the use of the internet and related
+      technologies to harm other people in a deliberate , repeated , and hostile manner .</b></p>
+
+  <br>
+
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style:underline ;text-decoration-color:yellow; font-size: 50px; ">
+    Different Forms of Cyberbullying</h1>
+
+  <p>
+  <ul style="padding-left:60px ; font-size: 25px; list-style-type:square;    line-height: 1.8; ">
+    <li><b>Flaming</b></li>
+    <p style="color:#00008B ;">Online fights using electronic messages with angry and vulgar language are referred to as
+      Flaming.</p>
+    <li><b>Harassment</b></li>
+    <p style="color:#00008B;">Repeatedly sending nasty , mean and insultingmessages is called Harassment.</p>
+    <li><b>Denigration</b></li>
+    <p style="color:#00008B ;">"Dissing" someone online ; sending or posting gossip or rumors about a person to damage
+      his or her reputation or friendship is known as Denigration.</p>
+    <li> <b>Impersonation </b></li>
+    <p style="color:#00008B ;">pretending to be someone else and sending or posting materials to get that person in
+      trouble or in danger , or to damage that person's friendship or reputation is known as Impersonation.</p>
+    <li><b>Outing</b></li>
+    <p style="color:#00008B ;">sharing someone's secrets or embarrassing information or images online is called Outing
+    </p>
+    <li><b>Trickery</b></li>
+    <p style="color:#00008B ;">talking to someone into revealing secrets or embarrassing information , and then share it
+      in online is reffered to as Trickery.</p>
+    <li><b>Exclusion</b></li>
+    <p style="color:#00008B ;">intentionally and cruelly excluding someone from an online group is called Exclusion.</p>
+    <li><b>Cyberstalking</b></li>
+    <p style="color:#00008B ;">repeated intense harassment and denigration , that include threats or create significant
+      fear is known as Cyberstalking</p>
+  </ul>
+  </p>
+
+  <br>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<html>
+
+<head>
+  <title> INTELLECT</title>
+  <link rel="icon" type="image/x-icon" href="olp/logo5.png">
+</head>
+
+<body>
+
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: -6px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+
+
+    .dropdown {
+      float: left;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 16px 16px;
+      background-color: inherit;
+      font-family: papyrus;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 206, 114);
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 270px;
+      box-shadow: 0px 10px 18px 0px rgba(0, 0, 0, 0.4);
+      border: 2px solid black;
+
+    }
+
+    .dropdown-content h6 {
+      float: none;
+      font-size: 15px;
+      color: black;
+      padding-left: 5px;
+
+      text-align: left;
+      line-height: 0.1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="35px" height="auto" src="olp/logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="mweb.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="mweb.html">contents</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html">support</a> </li>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Topics </button>
+          <div class="dropdown-content">
+            <h6>1 Flora and Fauna</h6>
+            <h6>2 Ecosystem</h6>
+            <h6>3 Species</h6>
+            <h6>4 Endangered , Extinct and Endemic species</h6>
+            <h6>5 what is Red Data Book ?</h6>
+            <h6>6 What is Biosphere ?</h6>
+            <h6>7 Wildlife Sanctuary,Biosphere reserve and National park</h6>
+            <h6>8 Project Tiger</h6>
+
+
+          </div>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <style>
+    body {
+      background-color: #F0F8FF;
+    }
+  </style>
+
+  <h1
+    style="color:rgb(0, 0, 0);  position: relative ; top:70px;text-decoration-line: underline; text-decoration-style: solid; text-decoration-color: rgb(48, 6, 201); text-align: center; font-size: 90px;font-family: papyrus;position: absolute;top:11%;left:25%">
+    Flora and Fauna</h1>
+
+  <style>
+    img {
+      float: right;
+      padding: 10px;
+    }
+  </style>
+
+  <br>
+  <br>
+  <br>
+
+
+
+  <style>
+    img {
+      float: right;
+      padding: 8px;
+    }
+
+    span {
+      color: black;
+    }
+  </style>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p style="font-size:30px; color: rgba(8, 133, 8, 0.863);"><b><span>Flora :</span> The plants which are found in a
+      paticular area.</b></p>
+  <p style="font-size:30px; color: rgb(185, 49, 49);"><b><span>Fauna:</span> The animals which are found in a paticular
+      area.</b></p>
+
+  <br>
+
+  <h1
+    style="  color:rgb(22, 14, 121); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #000000;font-size: 40px;">
+    Ecosystem</h1>
+  <p style="font-size:30px; color: rgb(12, 1, 12);"><img src="olp/fauna.png" alt="drugpic"
+      style="width:450px;height:250px;margin-left:20px; font-size: 40px;">An ecosystem is made of all the plants ,
+    animals and microorganism in an area
+    along with non-living components such as climate , soil , river deltas etc..
+    <br>
+
+  <h1
+    style="  color: rgb(80, 173, 18); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Species</h1>
+  <p style="font-size: 30px; color: #008080;">A group of plants or animals having similar characteristic and capable of
+    interbreeding within
+    the group is termed as SPECIES</p>
+
+  <br>
+
+  <h1
+    style=" text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #ee0303;font-size: 40px;">
+    Endangered , Extinct and Endemic species</h1>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px; color: #ff0000e7;display: inline-block;">
+    <li>Endangered species</li>
+    <p style="color: #008080;">The species of animals whose numbers are diminishing to such a level that they might face
+      extinction. </p>
+    <li>Extinct species</li>
+    <p style="color: #008080;">The species of animals whose number is zero because of changes in their habitat and other
+      calamities .</p>
+    <li>Endemic species</li>
+    <p style="color: #008080;">Species which are found only in a paticular area is called Endemic species. </p>
+  </ul>
+  </p>
+
+
+  <h1
+    style="  color: #D8BFD8; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    what is Red Data Book ?</h1>
+  <p style="font-size: 30px; color: #008080;"><img src="olp/book.jpeg" alt="drugpic"
+      style="width:300px;height:200px;margin-left:20px; font-size: 40px;">Red Data Book is a sourcebook which keeps
+    records of all endangered plant and animals . Red Data Book is also known as IUCN Red List</p>
+
+  <br>
+
+  <h1
+    style="  color: #B22222; -webkit-text-stroke:1px #f9f9f9;text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    What is Biosphere ?</h1>
+  <p style="font-size: 30px; color: #008080;">Biosphere is the part of the earth in which living organisms exist or
+    which support life.</p>
+  <br>
+
+  <h1
+    style="  color: #9ACD32; text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Wildlife Sanctuary , Biosphere reserve and National park</h1>
+  <p>
+  <ul style="padding-left:60px ; font-size: 30px; color: #ff0000e7;display: inline-block;">
+    <li>Wildlife Sanctuary</li>
+    <p style="color: #008080;">The areas reserved in a forest for the protection of wild animals.</p>
+    <li>Biosphere reserve</li>
+    <p style="color: #008080;">The areas meant for the protection of conservation of biodiversity . it also helps in
+      maintainning the culture of that area.</p>
+    <li>National park</li>
+    <p style="color: #008080;">National Park is an area strictly reserved for the betterment of wildlife and where
+      activities like Forestry, grazing, or cultivation are not permitted. </p>
+  </ul>
+  </p>
+  <br>
+
+  <h1
+    style="  color: #2E8B57;text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: #faa302;font-size: 40px;">
+    Project Tiger - (wildlife conservation movement)</h1>
+  <p style="font-size: 30px; color: #008080;"><img src="olp/tiger.jpeg" alt="drugpic"
+      style="width:300px;height:200px;margin-left:18px; ">Project Tiger is a wildlife conservation movement initiated in
+    India in 1973 to protect bengal tigers.This project was launched to ensure the survival maintenance of the tiger
+    population in the country. Tiger is one of the many species which are slowly disappearing from our forest .
+    The tiger is an endangered species in the world .By this project number of tigers is increased .</p>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</body>
+
+</html>

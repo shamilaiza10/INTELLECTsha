@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="olp/attainlogo2.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      user-select: none;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /*scroll bar*/
+
+    ::-webkit-scrollbar {
+      width: 15px;
+
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(165, 238, 106);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgb(236, 119, 119);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: blanchedalmond;
+    }
+
+
+
+    #banner {
+      background: url("olp/studyweb.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+
+    }
+
+    .navbar {
+
+      top: -3%;
+      width: 100%;
+      z-index: 999;
+      padding: 30px 0;
+      font-family: "Ubuntu", sans-serif;
+      transition: all 0.3s ease;
+
+    }
+
+    .navbar .max-width {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar .logo img {
+      color: transparent;
+      font-size: 50px;
+      font-weight: 600;
+      margin-left: 55px;
+    }
+
+    /*  Nav Logo Span Linear-Gradient  */
+
+
+    .navbar .menu li {
+      list-style: none;
+      display: inline-block;
+      position: relative;
+      left: 190%;
+      margin-top: -30px;
+
+    }
+
+    .navbar .menu li a {
+      display: block;
+      color: rgb(231, 210, 23);
+      font-size: 25px;
+      font-weight: 500;
+      margin-left: 25px;
+      margin-top: 15px;
+      transition: color 0.3s ease;
+      -webkit-text-stroke: 1px black;
+
+    }
+
+    .navbar .menu li a:hover {
+      color: #8ed3d3;
+    }
+
+    .navbar.sticky .menu li a:hover {
+      color: #ff1605;
+    }
+
+    /*  Menu Btn  */
+    .menu-btn {
+      font-size: 23px;
+      cursor: pointer;
+      display: none;
+
+    }
+
+
+    #home {
+      position: absolute;
+      top: 35%;
+    }
+
+    .home-content .text-1 {
+      font-size: 64px;
+      color: whitesmoke;
+      margin-left: 75px;
+      font-family: lucida handwriting;
+    }
+
+    .home-content .text-2 {
+      font-size: 67px;
+      color: wheat;
+      margin-left: 75px;
+      font-family: lucida handwriting;
+    }
+
+    .glow {
+      font-size: 75px;
+      font-family: none;
+      color: wheat;
+      color: #fff;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgba(37, 221, 0, 0.685), 0 0 40px rgba(37, 221, 0, 0.685), 0 0 50px rgba(37, 221, 0, 0.685), 0 0 60px rgba(37, 221, 0, 0.685), 0 0 70px rgba(37, 221, 0, 0.685);
+      }
+
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px rgb(4, 250, 238), 0 0 40px #ff4da6, 0 0 50px rgb(4, 250, 238), 0 0 60px #ff4da6, 0 0 70px rgb(4, 250, 238), 0 0 80px #ff4da6;
+      }
+    }
+
+
+
+    .about {
+      background-image: url(https://png.pngtree.com/background/20211217/original/pngtree-stationary-school-education-background-picture-image_1594834.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 90vh;
+    }
+
+    .about-text-logo {
+      position: absolute;
+      left: 210px;
+      margin-top: 23px;
+
+    }
+
+    .about-text {
+      margin: 10% 19%;
+      font-size: 35px;
+      font-weight: 700;
+      font-family: papyrus;
+    }
+
+
+    /*contents*/
+
+    .contents-page {
+      background-color: beige;
+      height: 100vh;
+    }
+
+    @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+    :root {
+      --d: 700ms;
+      --e: cubic-bezier(0.19, 1, 0.22, 1);
+      --font-sans: "Rubik", sans-serif;
+      --font-serif: "Cardo", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .main-text {
+      text-align: center;
+      margin-top: 30px;
+      color: burlywood;
+      font-size: 64px;
+      text-decoration: double;
+      text-decoration-color: limegreen;
+      text-decoration-thickness: 3px;
+      text-decoration-line: underline;
+    }
+
+    .page-content {
+      display: grid;
+      grid-gap: 1rem;
+      padding: 1rem;
+      max-width: 1024px;
+      margin-top: 60px;
+      margin-left: 150px;
+      font-family: var(--font-sans);
+    }
+
+    @media (min-width: 600px) {
+      .page-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 800px) {
+      .page-content {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .card {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      color: whitesmoke;
+      background-color: whitesmoke;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 600px) {
+      .card {
+        height: 350px;
+      }
+    }
+
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+      background-size: cover;
+      background-position: 0 0;
+      transition: transform calc(var(--d) * 1.5) var(--e);
+      pointer-events: none;
+    }
+
+    .card:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      pointer-events: none;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+      transform: translateY(-50%);
+      transition: transform calc(var(--d) * 2) var(--e);
+    }
+
+    .card:nth-child(1):before {
+      background-image: url(https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    }
+
+    .card:nth-child(2):before {
+      background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    }
+
+    .card:nth-child(3):before {
+      background-image: url(https://cdn.mos.cms.futurecdn.net/ZmVrNbGdHAtHbBZi9zUpK-650-80.jpg.webp);
+    }
+
+    .card:nth-child(4):before {
+      background-image: url(https://www.shutterstock.com/image-photo/close-male-hand-taking-yellow-260nw-1613502925.jpg);
+    }
+
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 1rem;
+      transition: transform var(--d) var(--e);
+      z-index: 1;
+    }
+
+    .content>*+* {
+      margin-top: 1rem;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .copy {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    .btn {
+      cursor: pointer;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.65rem;
+      font-weight: bold;
+      letter-spacing: 0.025rem;
+      text-transform: uppercase;
+      color: white;
+      background-color: black;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: #0d0d0d;
+    }
+
+    .btn:focus {
+      outline: 1px dashed yellow;
+      outline-offset: 3px;
+    }
+
+    @media (hover: hover) and (min-width: 600px) {
+      .card:after {
+        transform: translateY(0);
+      }
+
+      .content {
+        transform: translateY(calc(100% - 4.5rem));
+      }
+
+      .content>*:not(.title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+      }
+
+      .card:hover,
+      .card:focus-within {
+        align-items: center;
+      }
+
+      .card:hover:before,
+      .card:focus-within:before {
+        transform: translateY(-4%);
+      }
+
+      .card:hover:after,
+      .card:focus-within:after {
+        transform: translateY(-50%);
+      }
+
+      .card:hover .content,
+      .card:focus-within .content {
+        transform: translateY(0);
+      }
+
+      .card:hover .content>*:not(.title),
+      .card:focus-within .content>*:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+      }
+
+      .card:focus-within:before,
+      .card:focus-within:after,
+      .card:focus-within .content,
+      .card:focus-within .content>*:not(.title) {
+        transition-duration: 0s;
+      }
+    }
+
+
+    /*tips*/
+    #tips {
+      background: linear-gradient(rgb(243, 150, 150), white, rgb(255, 255, 0));
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+
+    .tips-main-textt {
+      text-align: center;
+      margin-top: 30px;
+      color: orangered;
+      font-size: 64px;
+      text-decoration: double;
+      text-decoration-color: rgb(177, 172, 243);
+      text-decoration-thickness: 3px;
+      text-decoration-line: underline;
+    }
+
+    .tipps {
+      line-height: 40px;
+      list-style: square;
+      padding-left: 100px;
+      padding-right: 90px;
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
+
+    .tipps strong {
+      color: #040d8b;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .tipli {
+      font-size: 25px;
+      color: #090d0e;
+      font-weight: 600;
+    }
+
+    /*memory*/
+    #memory {
+      background: linear-gradient(rgb(183, 241, 234), white, rgb(177, 238, 169), rgb(228, 131, 131));
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .memory-head {
+      text-align: center;
+      margin-top: 30px;
+      color: orangered;
+      font-size: 64px;
+      text-decoration: double;
+      text-decoration-color: rgb(177, 172, 243);
+      text-decoration-thickness: 3px;
+      text-decoration-line: underline;
+    }
+
+    .memory-ull {
+      line-height: 40px;
+      list-style: square;
+      padding-left: 100px;
+      padding-right: 90px;
+      margin-top: 70px;
+      margin-bottom: 20px;
+    }
+
+    .mem strong {
+      color: #040d8b;
+      font-size: 30px;
+      font-weight: 900;
+    }
+
+    .mem {
+      font-size: 25px;
+      color: #090d0e;
+      font-weight: 600;
+    }
+
+
+
+    /*footer*/
+    footer {
+      margin-top: 15px;
+    }
+
+    .foot-panel1 {
+      background-color: #1a1a1d;
+      color: #fffb03;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .foot-panel1 p {
+      font-size: 16px;
+      color: #fffb03;
+    }
+
+    .foot-panel2 {
+      background-color: #761fa1;
+      color: #e7f1e5;
+      height: 200px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+    ul a {
+      display: block;
+      font-size: 22px;
+      margin-top: 10px;
+      color: rgb(207, 206, 206);
+    }
+
+    .foot-panel4 {
+      padding: 6px 16px;
+      color: #71d5ee;
+      text-align: center;
+    }
+
+
+    .pop {
+      color: black;
+      font-family: 'Poppins';
+      font-size: 20px;
+    }
+
+    .pop:hover {
+      color: rgb(161, 156, 156);
+    }
+
+    .wrapperr {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 20%;
+      align-items: center;
+      height: 10vh;
+      font-family: 'Poppins';
+    }
+
+    .follow {
+      width: 280px;
+      height: 60px;
+      border: 3px solid rgb(161, 156, 156);
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: relative;
+      color: black;
+      cursor: pointer;
+      overflow: hidden;
+      font-size: 24px;
+      transition: all 0.5s ease;
+    }
+
+    .follow:before {
+      content: "FOLLOW US";
+      font-family: "Poppins", sans-serif;
+      font-weight: bolder;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(161, 156, 156);
+      transition: all 0.5s ease;
+    }
+
+    .follow:hover {
+      background: #FFF
+    }
+
+    .follow:hover:before {
+      top: -50%;
+    }
+
+    .foot-panel3 {
+      background: #761fa1;
+      padding: 6px 16px;
+      color: #090d0e;
+      text-align: center;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+
+    a:visited {
+      text-decoration: none;
+    }
+
+
+    a:hover {
+      text-decoration: none;
+    }
+
+
+    /*=--------------------------------cha----------------------------t*/
+
+    #bottoggle {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      padding: 12px 15px;
+      border: none;
+      background-color: #be49a1;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 23px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1001;
+      /* Ensure the button is above the chatbot popup */
+    }
+
+    #bottoggle:hover {
+      background-color: #e078c8;
+    }
+
+    #chatbotpop {
+      display: none;
+      position: fixed;
+      bottom: 65px;
+      right: 35px;
+      background: url(chattbg.jpeg);
+
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      max-width: 90%;
+      z-index: 1000;
+
+    }
+
+    #chatheader {
+      background-color: rgb(254, 253, 223);
+      color: #df1ce6;
+      font-family: "Sofia", sans-serif;
+      font-weight: 900;
+      padding: 15px 20px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+
+
+
+    #closybtn {
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #chatbox {
+      max-height: 350px;
+      overflow-y: auto;
+      padding: 15px 20px;
+    }
+
+    #chatinput {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    #userinput {
+      font-family: "Sofia", sans-serif;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      outline: none;
+    }
+
+    #sendbtn {
+      font-family: "Sofia", sans-serif;
+      padding: 10px 20px;
+      border: none;
+      background-color: #2eaf34;
+      color: #fff;
+      border-radius: 12px;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #sendbtn:hover {
+      background-color: #a4dd83;
+    }
+
+
+
+    #usermessage {
+      background-color: rgb(240, 229, 210);
+      color: #333;
+      padding: 14px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      margin-left: 10px;
+      /* Push user message to the left */
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      /* Move user message to the right */
+    }
+
+    #usermessage::before {
+      position: absolute;
+      bottom: -17px;
+      right: -20px;
+      margin-bottom: 7px;
+      font-size: 20px;
+      color: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    #botmessage {
+      background-color: #e99deb;
+      color: #fff;
+      padding: 14px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      align-self: flex-start;
+      font-weight: 700;
+      margin-right: 10px;
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      /* Adjust for button placement */
+    }
+
+    #botmessage::before {
+      content: "\1F916";
+      /* Robot emoji */
+      position: absolute;
+      bottom: -17px;
+      left: -14px;
+      margin-bottom: 4px;
+      font-size: 20px;
+      font-weight: 700;
+      background-color: #e99deb;
+      color: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <section id="banner">
+
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo"><img src="olp/attainlogo.png"></div>
+        <div class="menuback">
+          <ul class="menu">
+            <li><a href="#banner" class="menu-btn"><strong>Home</strong></a></li>
+            <li><a href="#about" class="menu-btn"><strong>About</strong></a></li>
+            <li><a href="#contents-page" class="menu-btn"><strong>Contents</strong></a></li>
+          </ul>
+        </div>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <section id="chater">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <div id="bottoggle"><ion-icon name="chatbubbles-sharp" id="chaty"></ion-icon></div>
+    <div id="chatbotpop">
+      <div id="chatheader">
+        Chatbot | INTELLECT
+        <div id="closybtn">&times;</div>
+      </div>
+      <div id="chatbox"></div>
+      <div id="chatinput">
+        <input type="text" id="userinput" placeholder="Type a message...................">
+        <div id="sendbtn">Send</div>
+      </div>
+    </div>
+
+    <script>
+      const responses = {
+        "hello": "Hi there! How can I assist you today?",
+        "hi": "Hi there! How can I assist you today?",
+        "intellect": "Here you will get Notes and a lot of information.We,INTELLECT, guides you and helps you to complete your projects in a awsoome manner. We will be there for u always :)",
+        "about intellect": "Here you will get Notes and a lot of information.We,INTELLECT, guides you and helps you to complete your projects in a awsoome manner. We will be there for u always :)",
+        "about developer": "want to know more about Developer , visit  <a href='portfolio.html'  target='_blank'  style='font-size:17px;' >DEVELOPER PAGE</a>",
+        "developer": "want to know more about Developer , visit  <a  href='portfolio.html'  target='_blank' style='font-size:17px;'>DEVELOPER PAGE</a>",
+
+        "how are you": "I'm just a bot, but I'm here to help you!",
+        "how r u": "I'm just a bot, but I'm here to help you!",
+        "how are you ?": "I'm just a bot, but I'm here to help you!",
+        "need help": "How I can help you today?",
+        "bye": "Goodbye! Have a great day!",
+        "thank u": "it's my pleasure 😊",
+        "thank you": "it's my pleasure 😊",
+
+        "drugs": "want to know more about drugs , visit our <a href='web.html'  target='_blank' style='font-size:17px; color:white;'>DRUG PAGE</a>",
+        "drug": "want to know more about drugs , visit our <a href='web.html'  target='_blank' style='font-size:17px; color:white;'>DRUG PAGE</a>",
+
+        "cyber security": "want to know more about Cyber Security , visit our <a href='web2.html'  target='_blank' style='font-size:17px; color:white;'>CYBER SECURITY PAGE</a>",
+        "hacking": "want to know more about Hacking, visit our <a href='web2.html'  target='_blank' style='font-size:17px; color:white;'>HACKING PAGE</a>",
+
+        "ai": "want to know more about AI , visit our <a href='aii.html'  target='_blank' style='font-size:17px; color:white;'>AI PAGE</a>",
+
+        "deforestation": "want to know more about Deforestation  , visit our <a href='para.html'  target='_blank' style='font-size:17px; color:white;'>DEFORESTATION PAGE</a>",
+
+        "machine language": "want to know more about Machine language   , visit our <a href='compprogram.html'  target='_blank' style='font-size:17px; color:white;'>MACHINE LANGUAGE PAGE</a>",
+        "computer programming": "want to know more about Computer Programming , visit our <a href='compprogram.html'  target='_blank' style='font-size:17px;color:white;'>COMPUTER PROGRAMMING PAGE</a>",
+
+        "computer network": "want to know more about Computer Network , visit our <a href='networks.html'  target='_blank' style='font-size:17px; color:white;'>COMPUTER NETWORK PAGE</a>",
+
+        "flora and fauna": "want to know more about Flora and Fauna, visit our <a href='flora.html'  target='_blank' style='font-size:17px; color:white;'>FLORA and FAUNA PAGE</a>",
+        "flora": "want to know more about Flora, visit our <a href='flora.html'  target='_blank' style='font-size:17px; color:white;'>FLORA PAGE</a>",
+        "fauna": "want to know more about Fauna, visit our <a href='flora.html'  target='_blank' style='font-size:17px; color:white;'>FAUNA PAGE</a>",
+        "project tiger": "want to know more about Project Tiger, visit our <a href='flora.html'  target='_blank' style='font-size:17px; color:white;'>PROJECT TIGER PAGE</a>",
+
+        "cloud computing": "want to know more about Cloud Computing, visit our <a href='cloud.html'  target='_blank' style='font-size:17px; color:white;'>CLOUD COMPUTING PAGE</a>",
+
+
+        "tips for learning": "want some tips for learning , visit our learning guide website.<a href='attain.html'  target='_blank' style='font-size:17px; color:white;'>ATTAIN</a> or visit directly the <a href='attain.html#tips' target='_blank'  style='font-size:17px; color:white;'>TIPS PAGE</a>",
+
+        "tips for improving memory": "want some tips for improving memory , visit our learning guide website.<a href='attain.html'  target='_blank' style='font-size:17px; color:white;'>ATTAIN</a> or visit directly the <a href='attain.html#memory' target='_blank' style='font-size:17px; color:white;'> MEMORY IMPROVEMENT PAGE</a>",
+
+        "default": "Oops, I'am sorry, I didn't understand that.",
+      };
+
+      document.getElementById('bottoggle').addEventListener('click', toggleChatbot);
+      document.getElementById('closybtn').addEventListener('click', toggleChatbot);
+      document.getElementById('sendbtn').addEventListener('click', sendMessage);
+      document.getElementById('userinput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+          sendMessage();
+        }
+      });
+
+      function toggleChatbot() {
+        const chatbotPopup = document.getElementById('chatbotpop');
+        chatbotPopup.style.display = chatbotPopup.style.display === 'none' ? 'block' : 'none';
+      }
+
+      function sendMessage() {
+        const userInput = document.getElementById('userinput').value.trim();
+        if (userInput !== '') {
+          appendMessage('user', userInput);
+          respondToUser(userInput.toLowerCase());
+          document.getElementById('userinput').value = '';
+        }
+      }
+
+      function respondToUser(userInput) {
+        const response = responses[userInput] || responses["default"];
+        setTimeout(function () {
+          appendMessage('bot', response);
+        }, 500);
+      }
+
+      function appendMessage(sender, message) {
+        const chatBox = document.getElementById('chatbox');
+        const messageElement = document.createElement('div');
+        messageElement.setAttribute("id", sender === 'user' ? 'usermessage' : 'botmessage');
+        messageElement.innerHTML = message;
+        chatBox.appendChild(messageElement);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+      }
+    </script>
+  </section>
+
+
+  <!--home-->
+
+
+  <section class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1">Hello, </div>
+        <div class="text-2">Need help in <span class="glow">STUDIES</span></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--content-->
+
+  <section class="contents-page" id="contents-page">
+
+    <div class="main-text">contents</div>
+
+    <main class="page-content">
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Tips </h2>
+          <p class="copy">Check out all of these pro tips for STUDIES.</p>
+          <a href="#tips" class="btn"> Check out</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <h2 class="title">To Do</h2>
+          <p class="copy">Add your tasks or works to remember it later</p>
+          <a class="btn" href="todo.html">View page</a>
+        </div>
+      </div>
+
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Improve Memory</h2>
+          <p class="copy">Improve your memory by these pro tips.</p>
+          <a class="btn" href="#memory">Check out</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="content">
+          <h2 class="title">Sticky note</h2>
+          <p class="copy">Now , add your tasks and notes here..</p>
+          <a class="btn" href="stickynote.html" target="_blank">go to page</a>
+        </div>
+
+
+    </main>
+
+  </section>
+
+
+
+
+  <!--about-->
+
+  <section class="about" id="about">
+    <div class="main-text">About</div>
+    <div class="about-text-logo"><img src="olp/attainlogo2.png"></div>
+    <div class="about-text">ATTAIN is a website , developed for helping students to learn . In this website , we have
+      provided many tips for learning . </div>
+
+  </section>
+
+  <br>
+
+  <!--tips-->
+
+  <section class="tips" id="tips">
+
+    <br>
+    <div class="tips-main-textt">Tips for Studing</div>
+
+    <ul class="tipps">
+      <li class="tipli"><strong>Set a Schedule: </strong> Be intentional about planning set study sessions. Mark out
+        chunks of time that you can devote to your studies on your calendar.</li>
+      <br>
+      <li class="tipli"><strong>Study at Your Own Pace: </strong> Everyone has a different pace of studying. Don’t try
+        to match someone else’s speed. Find what works for you</li>
+      <br>
+      <li class="tipli"><strong>Get some rest: </strong> Your body needs rest; getting enough sleep is crucial for
+        memory function. This is one reason that scheduling study time is so important: It reduces the temptation to
+        stay up all night cramming for a big test. Instead, you should aim for seven or more hours of sleep the night
+        before an exam </li>
+      <br>
+      <li class="tipli"><strong>Silence Your Cell Phone: </strong> Interruptions from your phone can break your
+        concentration. Consider turning off your phone’s sounds or putting your device into do not disturb mode before
+        you start</li>
+      <br>
+      <li class="tipli"><strong>Create Your Perfect Study Space: </strong> Pick a good place to study. There’s a
+        delicate balance when it comes to the best study spot</li>
+      <br>
+      <li class="tipli"><strong>Pay attention in class: </strong> Concentrate on what the teacher is saying and avoid
+        distractions. Take notes, ask questions, and participate in discussions. This will help you understand the
+        material better and remember it longer</li>
+      <br>
+      <li class="tipli"><strong>Set study goals for each session: </strong> Before you start studying, decide what you
+        want to accomplish and how long you want to spend on it. For example, you can set a goal to finish a chapter,
+        solve 10 problems, or memorize 20 terms. This will help you stay focused and motivated</li>
+      <br>
+      <li class="tipli"><strong>Take breaks: </strong> Taking breaks can help you stay focused and avoid burnout. Try to
+        take a 5-10 minute break every hour or so</li>
+      <br>
+      <li class="tipli"><strong>Take practice tests: </strong> One of the best ways to prepare for a test is to take
+        practice tests. You can use past tests, sample questions, or online quizzes to test your knowledge and identify
+        your strengths and weaknesses. This will help you improve your performance and confidence</li>
+      <br>
+      <li class="tipli"><strong>Ask questions if you don’t understand: </strong> Raise your hand and ask questions if
+        you don’t understand something.</li>
+      <br>
+      <li class="tipli"><strong>Reward yourself : </strong> When you achieve your study goals, give yourself a reward,
+        like watching a show, playing a game, or hanging out with friends. This will help you feel good about your
+        progress and motivate you to keep going</li>
+      <br>
+      <li class="tipli"><strong>Use your own words: </strong> When you study, try to put the material in your own words,
+        instead of just copying or memorizing it. You can rewrite your notes, summarize the main points, or teach
+        someone else what you learned. This will help you understand the material better and remember it longer</li>
+
+
+    </ul>
+
+    <br>
+    <br>
+
+
+    <hr class="leo" width="20%" size="10px" color="black">
+  </section>
+
+  <hr class="looop" width="68%" size="10px" color="orangered">
+
+
+  <style>
+    .loooop {
+      float: right;
+      position: absolute;
+      right: 2%;
+    }
+  </style>
+
+  <!--memory tips-->
+
+  <section class="memory" id="memory">
+    <br>
+
+    <div class="memory-head">Tips to Improve MeMoRy</div>
+    <br>
+
+    <ul class="memory-ull">
+      <li class="mem"><strong>Sleep well:</strong>Sleep plays a vital role in consolidating and strengthening your
+        memory. Getting enough quality sleep every night can help you remember what you learned during the day. Avoid
+        staying up late or disrupting your sleep cycle with caffeine, alcohol, or electronics.</li>
+      <li class="mem"><strong>Focus your attention:</strong> Attention is essential for forming and retrieving memories.
+        Try to eliminate distractions and concentrate on the information you want to remember.</li>
+      <li class="mem"><strong>Eat a healthy diet:</strong>A balanced diet that includes fruits, vegetables, whole
+        grains, lean proteins, and healthy fats can nourish your brain and protect it from oxidative stress and
+        inflammation. Some foods that are particularly good for memory include berries, nuts, seeds, fish, and green
+        leafy vegetables.</li>
+      <li class="mem"><strong>Read out loud: </strong>Reading out loud can help you to retain information more
+        effectively than reading silently. When you read out loud, you both see and hear the information, which can help
+        you to remember it more easily.</li>
+      <li class="mem"><strong>Limit Stress and Maintain a Positive Lifestyle: </strong>The best way to protect and
+        improve memory is by making good lifestyle choices: exercising regularly, limiting stress, eating healthfully,
+        and getting enough sleep.</li>
+      <li class="mem"><strong>Visualize concepts:</strong>Many people benefit greatly from visualizing the information
+        they study. Pay attention to the photographs, charts, and other graphics in your textbooks. If you don’t have
+        visual aids, try creating your own. Draw charts or figures in the margins of your notes or use highlighters or
+        pens in different colors to group related ideas in your written study materials.</li>
+      <li class="mem"><strong>brain exercises:</strong>such as crossword puzzles, sudoku, chess, or learning a new
+        skill, to keep your mind sharp and flexible.</li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+
+  </section>
+
+  <br>
+
+  <!--footer-->
+
+  <section class="footer" id="footer">
+    <footer>
+      <div class="foot-panel1">
+        <a href="#banner">
+          <p>back to top</p>
+        </a>
+      </div>
+
+
+      <div class="foot-panel2">
+
+
+        <ul>
+          <a style="font-weight:bolder; color: rgb(235, 213, 14);text-decoration: underline;">Get to Know Us</a>
+          <a href="#about">About us</a>
+          <a href="form.html" target="_blank">Support us</a>
+          <a href="portfolio.html" target="_blank">Developer</a>
+
+        </ul>
+
+        <div class="foot-panel4">
+          <ul>
+            <a style="font-weight:bolder; color: rgb(235, 213, 14);text-decoration: underline;"> Main website</a>
+            <a href="index.html" target="_blank"> INTELLECT</a>
+          </ul>
+        </div>
+
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="wrapperr">
+          <div class="follow">
+            <a href="#" class="pop"><i class="fa fa-github-square"></i></a>
+            <a href="https://youtu.be/4VgtNE7UxeQ?si=o7RMczO2otVyLDxo" target="_blank" class="pop"><i
+                class="fa fa-youtube-play"></i></a>
+            <a href="#" class="pop"><i class="fa fa-facebook-square"></i></a>
+            <a href="#" class="pop"><i class="fa fa-twitter-square"></i></a>
+            <a href="#" class="pop"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="foot-panel3">
+        <span>
+          <span></span>&copy; 2023-24 , ATTAIN.com , All Rights Reserved.</span>
+      </div>
+
+    </footer>
+
+  </section>
+
+
+</body>
+
+</html>

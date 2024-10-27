@@ -1,0 +1,353 @@
+<html>
+
+<head>
+  <title>INTELLECT</title>
+  <link rel="icon" type="image/x-icon" href="logo5.png">
+</head>
+
+<body>
+  <style>
+    a {
+      color: inherit;
+      font-size: 10;
+      text-decoration: none;
+    }
+
+    #navbar {
+      background: rgb(25, 25, 26);
+      color: rgb(13, 26, 38);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 53px;
+      line-height: 60px;
+      width: 98.7vw;
+      z-index: 10;
+    }
+
+    @keyframes animateBg {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .nav-wrapper {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+    }
+
+    @media(max-width: 768px) {
+      .nav-wrapper {
+        width: 90%;
+      }
+    }
+
+    @media(max-width: 638px) {
+      .nav-wrapper {
+        width: 100%;
+      }
+    }
+
+
+    .logo {
+      float: right;
+      position: absolute;
+      right: 2%;
+      margin-top: 0px;
+      font-size: 55px;
+      height: 0px;
+
+
+    }
+
+
+    #navbar ul {
+      list-style: none;
+      margin-right: 5px;
+      margin-top: -5px;
+      text-align: right;
+      position: absolute;
+      top: 2px;
+      left: 35%;
+      transition: transform 0.5s ease-out;
+      -webkit-transition: transform 0.5s ease-out;
+    }
+
+    @media(max-width: 640px) {
+      #navbar ul {
+        display: none;
+      }
+    }
+
+    @media(orientation: landscape) {
+      #navbar ul {
+        display: inline-block;
+      }
+    }
+
+    #navbar li {
+      display: inline-block;
+    }
+
+    #navbar li a {
+      color: rgb(250, 246, 246);
+      display: block;
+      font-size: 15px;
+      height: 50px;
+      letter-spacing: 0.2px;
+      margin: 0 20px;
+      padding: 0 4px;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    #navbar li a:hover {
+      border-bottom: 1px solid rgb(240, 84, 12);
+      color: rgb(247, 94, 23);
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+
+    /* Animated Bottom Line */
+    #navbar li a:before,
+    #navbar li a:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      bottom: -1px;
+      background: rgb(13, 26, 38);
+    }
+
+    #navbar li a:before {
+      left: 0;
+      transition: 0.5s;
+    }
+
+    #navbar li a:after {
+      background: rgb(13, 26, 38);
+      right: 0;
+      /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
+    }
+
+    #navbar li a:hover:before {
+      background: rgb(13, 26, 38);
+      width: 100%;
+      transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+    }
+
+    #navbar li a:hover:after {
+      background: transparent;
+      width: 100%;
+      /* transition: 0s; */
+    }
+
+
+    @media(max-width: 640px) {
+      .menuIcon {
+        cursor: pointer;
+        display: block;
+        position: fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width: 27px;
+        z-index: 12;
+      }
+
+    }
+
+    ion-icon {
+      color: rgb(225, 240, 95);
+      font-size: 35px;
+      float: left;
+      position: absolute;
+      left: -440px;
+      top: 10px;
+    }
+  </style>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+
+      <div class="logo">
+        <img class="logooo" width="36px" height="auto" src="logo6.png">
+      </div>
+
+      <ul id="menu">
+        <li></li>
+        <a href="file:///D:/digital%20fest%20new/web.html"><ion-icon name="chevron-back-circle"></ion-icon></a>
+        <li><a href="file:///D:/new%20website/mweb.html">contents</a></li>
+        <li><a href="file:///D:/new%20website/about.html">About</a></li>
+        <li><a href="file:///D:/new%20website/form.html">support</a> </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+  <h1
+    style="color:rgb(0, 0, 0); text-decoration-line: underline;text-decoration-style: double; text-decoration-color: blueviolet; text-align: center; font-size: 90px;">
+    Goverment Act </h1>
+
+  <br>
+
+  <p
+    style="color:rgb(255, 0, 13);font-size: 30px; font-style: italic; text-indent: 90px; text-align: justify;  padding: 70px;">
+    ADDRESSING THE DRUG USE PROBLEM IN INDIA: THE arrangements in India, different government departments and ministries
+    work to address the problem of drug use. Like elsewhere in the world, three broad approaches are followed to address
+    the issue of drug use – “supply reduction,” “demand reduction,” and “harm reduction.” The “supply reduction” sector
+    of the government works toward reducing the availability of illicit drugs through implementing the relevant drug
+    laws and policies and is managed largely by the Department of Revenue, Ministry of Finance, the Narcotics Control
+    Bureau, Ministry of Home Affairs, Government of India and a variety of other agencies in the central or state
+    governments. The “demand reduction” sector, on the other hand, deals with reducing the demand for drugs in the
+    population through prevention, treatment, and rehabilitation. The Ministry of Social Justice and Empowerment
+    (MoSJE), Government of India, is the nodal ministry for demand reduction and has a “Scheme for Prevention of
+    Alcoholism and Substance (Drugs) Abuse” in place since 1985–86.[5] This scheme of the MoSJE is implemented by the
+    nongovernmental organizations (NGOs), who run “Integrated Rehabilitation Centre for Addicts” for treatment and
+    rehabilitation of people with SUD. The health sector of the country also plays a very important role in drug demand
+    reduction by treatment of SUDs through government health-care facilities, which is the focus of this article. “Harm
+    reduction” in India is primarily seen as prevention of HIV among people who inject drugs and various strategies for
+    this are implemented by the National AIDS Control Organization, Ministry of Health and Family Welfare (MoHFW).[6]Go
+    to:THE “DRUG DE-ADDICTION PROGRAMME”: EVOLUTIONThe decade of 1980s witnessed some very important developments in
+    India, in response to the rising problems of drugs use. Along with the scheme of MoSJE (mentioned earlier), there
+    was a felt need among the experts and policy makers to address the medical treatment of SUDs through the health-care
+    systems of the country, involving the MoHFW, Government of India. It was envisaged that treatment provision will be
+    the mandate of MoHFW, while prevention and rehabilitación will be the mandate of the MoSJE. Following the
+    recommendations of a Cabinet subcommittee, the “Drug De-addiction Programme (DDAP)” was launched in 1988. The
+    program envisaged establishing 30-bedded “de-addiction centers” (DACs) (The term “de-addiction” continues to be used
+    in the official communications of the Government health sector, and hence, it is being used here. It should not be
+    seen as an endorsement of this term by the authors) in each of the six premier hospitals/institutions in the country
+    for providing inpatient treatment for patients with SUD. Within next few years, the program was further expanded in
+    1992–93 under a scheme for establishment of DACs in medical colleges/district hospitals in various states. Through a
+    collaboration between the central and state governments, the one-time expenses for establishment of DACs were borne
+    by the central government, while the recurring cost of running the DAC services was envisaged to be borne by the
+    state governments. The arrangement between the central and state government was made taking into consideration that
+    “health” subject is a shared mandate between the union and state governments under the Constitution of India. Thus,
+    the central government assistance was largely limited to provision of one-time grant for infrastructure, while
+    staff, supplies, and other recurring expenses were to be borne by the respective state governments. For the
+    northeastern states, however, there was a provision of an additional recurring assistance of up to Rs. 200,000 per
+    year per center by the central government. Under the scheme, about 122 DACs have been established by the MoHFW, of
+    which 43 are in the northeastern states. Besides, the DACs in the northeastern states, few others were also
+    supported by the MoHFW through provision of one-time infrastructure support as well as almost 100% of recurring
+    expenses for staff and supplies. These were located in the following central government institutes: All India
+    Institute of Medical Sciences (AIIMS), New Delhi; Postgraduate Institute of Medical Education and Research,
+    Chandigarh; National Institute of Mental Health and Neurosciences, Bengaluru; Jawaharlal Institute of Postgraduate
+    Medical Education and Research, Puducherry; and Ram Manohar Lohia Hospital, New Delhi. Out of these, the DAC at
+    AIIMS, New Delhi, was designated as the “National Drug Dependence Treatment Centre” (NDDTC) in 2002, with an
+    expanded mandate of working as a national level resource center. Apart from the clinical, academic, and training
+    activities, NDDTC has been tasked with the responsibility of playing an advisory role to the DDAP, MoH, and FW as
+    well as coordination of several activities on behalf of the Ministry.[7,8]The “DDAP” is a modest-sized program
+    coordinated by the MoHFW through a “section” in the Ministry where the day-to-day affairs are managed by a Director,
+    DDAP, who in turn, reports to a Joint Secretary. In most of the state governments, there are no state-level
+    counterparts for DDAP. There is also provision of an additional staff in the form of an assistant program
+    officer/under-secretary. However, none of the senior administrative officials are responsible exclusively for this
+    program and they have many other responsibilities as well. Thus, there is no senior official at the Union Health
+    Ministry in Government of India, tasked exclusively with looking after the adicción treatment issues. The budget
+    allocated to the DDAP is also modest; the approved budget outlay for 5 years in the 12th 5-year plan from 2012 to 17
+    was Rupees one hundred and fifty-one crores.[9]Go to:MAJOR FOCUS AREA OF DRUG DE-ADDICTION PROGRAMME: Capacidad
+    BUILDINGSince the direct provision of services through the MoHFW was very limited in scope and scale, an important
+    area identified by the DDAP from its very inception was building the capacities of service providers for providing
+    addiction treatment services. Considering the burden and magnitude of SUD and the shortage of specialist medical
+    professionals (i.e., psychiatrists) in India, the strategy was t provide short-term, in-service training to the
+    nonspecialist cadre of general duty medical officers (GDMOs), who were employed by the state government health
+    services. Through national level workshops of experts in 1988 and 2003, training curricula were developed to train
+    the GDMOs. While initially, the training courses were of three-week duration, over the years, the duration has been
+    reduced to 14 days, 10 days, and then 7 days on receiving feedback from the training participants. NDDTC, along with
+    other collaborating medical institutes, has conducted several training courses through which cumulatively more than
+    1000 doctors have been trained in management of SUDs in general health-care settings.Some important experiences were
+    gathered through these training programs. In general, these programs were perceived as very useful by the trainees.
+    This is understandable, since at the level of graduate medical course (MBBS), there is hardly any exposure or
+    training on substance use issues.[10] Thus, most trainees reported a significant enhancement of their knowledge,
+    which has been corroborated objectively through comparison of their scores on the pre- and post-training tests.
+    Another useful insight gained has been that the training programs are more effective when lecture/discussion formats
+    are supplemented with clinical exposure through live case demonstrations and trainees joining the resource persons
+    (faculty members) in the outpatient clinics or ward rounds. A major challenge has been in getting nominations of
+    in-service doctors from their respective state governments for the training program due to their clinical
+    responsibilities and competing health priorities. However, there is no clear indication whether the training gets
+    translated in enhancement of service delivery at the hospitals.Along with medical professionals, efforts have been
+    made to train paramedical and paraclinical professionals too though at a much smaller scale. Along with the
+    development of training curricula and conducting training programs, a very important capacity-building initiative of
+    DDAP has been development of resource materials such as manuals and handbooks for physicians, nurses, and
+    paramedical staff on brief interventions, pharmacotherapy, and psychosocial interventions. Most of the resource
+    materials are available for download free-of-cost from the NDDTC website at www.aiims.edu.Go to:DRUG ABUSE
+    MONITORING SistemaYet, another demand reduction area in which the MoHFW has taken the lead is the establishment of
+    “Drug Abuse Monitoring System” (DAMS) to track the pattern of drug use and profile of treatment seekers as well as
+    to assess any change in trends among treatment seekers at the government DACs. This system, developed by NDDTC for
+    DDAP, is based on data collection from all the government DACs on an annual basis and is continuing from the year
+    2007 onward till date.[11] Data on clinical and demographic profile for all the “new” treatment seekers at each DAC
+    are collected through a one-page performa and are collated and analyzed by NDDTC and shared with the DDAP. However,
+    compliance of the DACs with this system is far from adequate; analysis of the DAMS data conducted from the year 2007
+    to 2013 showed that 57% DACs participated in the activity; only 39% DACs had transmitted the data periodically. The
+    most striking feature was the variable patient load across the centers. On an average, each participating center
+    reported catering to few new patients. In other words, while there is a dearth of treatment services in the country,
+    existing services in the government hospitals are attracting very few patients.Go to:EVALUATION AND MONITORING OF
+    SERVICESWhile there is no ongoing program of monitoring the functioning of DACs, on a few occasions, monitoring and
+    evaluation exercises have been carried out by DDAP, MoHFW through NDDTC. In the first instance (2002), information
+    was obtained from 104 DACs through postal questionnaire and/or through onsite visits. It was seen that most
+    hospitals with DACs were providing some treatment services although only few DACs were functioning optimally.
+    Subsequently, DACs in five states (Himachal Pradesh, Punjab, Nagaland, Manipur, and Maharashtra) were visited in
+    2006–07 and interactions with officer-in-charge of the DACs were held. Some of the constraints in the functioning of
+    DACs noted in these evaluation exercises included:
+    There was mostly no provision of funding for providing services through the state governments for the DACs (except
+    for northeastern states that were receiving recurring grant from the central government)Low priority was accorded to
+    drug dependence treatment services by the hospital authorities. Trained doctors were not available in many of the
+    centers, neither was there any dedicated support staff (nurses/counselors)Very few patients were accessing services
+    and even those accessing services were not retained in treatment. Record maintenance was inadequate. Most of the
+    medicines required for treatment were usually not available. Psychosocial interventions were often not provided.
+    Community-based activities were lacking.</p>
+  <p
+    style="color:rgb(111, 0, 255);font-size: 30px; font-style: italic; text-indent: 50px; text-align: justify;  padding: 50px; ">
+    Subsequently, in one more evaluation conducted in 2007 that focused on assessment of outcome of treatment at the
+    DACs, outcome data for 3 years were collected through postal questionnaires and through visits from a total of 44
+    centers that had seen more than 100 new patients in the previous year. This exercise also confirmed the findings of
+    the previous evaluations.Thus, these evaluation exercises demonstrated that the model of service delivery – based on
+    an inpatient setting of care with infrastructure support by the central government and which was dependent on state
+    government support for continuation of services – was met with only partial success. Hence, there was an urgent need
+    of strengthening the DDAP of MoHFW in India.Go to:STRENGTHENING THE DRUG DE-ADDICTION PROGRAMME IN INDIAThe
+    provision of treatment services through DDAP has focused heavily on inpatient treatment services. However, with
+    accumulating experience in India and globally, it is now understood that a large number of patients can be treated
+    on an outpatient basis and only some may require inpatient services. Based on this, a scheme was developed by NDDTC,
+    AIIMS, titled “Strengthening DDAP: Establishment of Drug Treatment Clinics (DTCs)”. The scheme was subsequently
+    approved by the Expenditure Finance Committee of the MoHFW for the 12th 5-year plan period (2012-17). Through this
+    initiative, it was proposed that the DTC should be made functional in government health-care facilities (i.e.,
+    medical colleges and civil hospitals/district hospitals), largely utilizing the existing infrastructure. The DTC
+    would be part of the general hospital and dedicated to provide outpatient services for patients with substance use
+    problems. Some patients who need admission would be hospitalized in the established DAC ward/psychiatry
+    ward/medicine ward. Apart from emphasis on outpatient treatment, the most important departure from the existing
+    system includes direct funding from the central government for the staff salaries and procurement of medications
+    (routed through NDDTC, AIIMS). A nodal officer identified from the hospital and three dedicated contractual staff
+    (doctor, nurse, and counselor recruited for this purpose) are responsible for provision of services. The treatment
+    services include psychosocial as well as pharmacological interventions. All the DTCs provide free-of-cost medication
+    for short-term treatment of withdrawals and long-term pharmacotherapy (including opioid agonists, opioid
+    antagonists, and anti-craving and deterrent medications for treatment of alcohol use disorder). Those patients
+    requiring ancillary services are referred to other departments of the hospital and to NGOs for social needs. DTCs
+    also follow uniform system of record keeping of key activities and services, with periodic reporting to the regional
+    resource centers established in select psychiatry departments of medical colleges. The entire system is based on
+    intensive capacity building, monitoring, and mentoring of the staff, coordinated by the NDDTC and other regional
+    resource centers. As on December 2016, 14 such DTCs are functional in government hospitals in Delhi, Haryana,
+    Maharashtra, Manipur, Punjab, Rajasthan, and Uttar Pradesh. The scheme is on a scale-up mode and it is proposed that
+    by the end of 2017, there will be 25–30 DTCs across the country. The learning from this phase will be used to expand
+    the network of DTCs so that there are at least 100 government hospitals providing free-of-cost, outpatient treatment
+    for SUDs across the country. The initial experiences with the scheme are highly encouraging. This initiative has
+    been awarded the prestigious British Medical Journal South Asia Award for the year 2016 under the category
+    “Noncommunicable Disease Initiative of the Year.”</p>
+
+  <br>
+  <br>
+
+</body>
+
+</html>
